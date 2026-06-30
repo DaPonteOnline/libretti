@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use these editions, please cite them as below."
 type: dataset
+doi: 10.5281/zenodo.21082557
 title: "Lorenzo Da Ponte's Libretti — TEI Editions (Cinna, Il Ricco d'un giorno, Il Talismano)"
 abstract: >-
   TEI P5 digital editions of three drammi per musica by Lorenzo Da Ponte

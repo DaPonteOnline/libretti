@@ -1,5 +1,7 @@
 # Lorenzo Da Ponte's Libretti — TEI Editions
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21082557.svg)](https://doi.org/10.5281/zenodo.21082557)
+
 TEI P5 digital editions of three *drammi per musica* by **Lorenzo Da Ponte**
 (1749–1838), encoded as part of the *Da Ponte Libretti* digital scholarly
 edition. This repository is a standalone, citable dataset: the encoded texts
@@ -25,8 +27,12 @@ Attribution 4.0 International). Please attribute the editors when reusing.
 
 ## How to cite
 
-See [`CITATION.cff`](CITATION.cff). A DOI is minted by Zenodo on the first
-release — until then, cite by repository URL and version.
+This dataset is archived on Zenodo; see [`CITATION.cff`](CITATION.cff) for full
+metadata. Cite the **version** you consulted for reproducibility, and the
+**concept DOI** (all versions) in the bibliography:
+
+- **Concept DOI (all versions):** [10.5281/zenodo.21082557](https://doi.org/10.5281/zenodo.21082557)
+- **This version (v0.1.0):** [10.5281/zenodo.21082558](https://doi.org/10.5281/zenodo.21082558)
 
 ## Part of a larger edition
 

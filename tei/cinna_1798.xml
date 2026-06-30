@@ -1,0 +1,2270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+        <titleStmt>
+            <title type="full">Cinna</title>
+            <title type="sub">Edizione digitale</title>
+            <author><forename>Lorenzo</forename>
+               <surname>Da Ponte</surname></author>
+            <editor xml:id="IS"><forename>Ilaria</forename>
+               <surname>Scarponi</surname></editor>
+            <respStmt>
+               <resp>Encoding</resp>
+               <name><forename>Ilaria</forename>
+                  <surname>Scarponi</surname></name>
+            </respStmt>
+            <respStmt>
+               <resp>Supervisor</resp>
+               <name><forename>Alessandro</forename><surname>Borin</surname></name>
+			<orgName>Conservatorio di musica "Agostino Steffani"</orgName>
+            </respStmt>
+            <respStmt>
+               <resp>Co-supervisor</resp>
+               <name><forename>Roberta</forename><surname>Priore</surname></name>
+				<orgName>Alma Mater Studiorum - Università di Bologna</orgName>
+            </respStmt>
+            <respStmt>
+               <resp>Technical assistance</resp>
+               <name><forename>Mariia</forename><surname>Levchenko</surname></name>
+				<orgName>Alma Mater Studiorum - Università di Bologna</orgName>
+            </respStmt>
+         </titleStmt>
+            <editionStmt>
+            <p xml:lang="it">Questo documento contiene l’edizione digitale del libretto di un’opera
+               seria di Lorenzo Da Ponte (Cèneda, 1749 – New York, 1838), musicata da Francesco
+               Bianchi (Cremona, 1752 – Hammersmith, Londra, 1810) e rappresentata per la prima
+               volta al King’s Theatre di Londra il 20 febbraio 1798. L’edizione è concepita per
+               facilitare il confronto tra il testo, gli ipotesti, i passi paralleli e le
+               riproduzioni facsimilari dei testimoni.</p>
+            <p xml:lang="it">La codifica del testo rende le informazioni contenute nell’opera
+               accessibili, interrogabili e riutilizzabili attraverso strumenti digitali.</p>
+            <p xml:lang="it">L’edizione è destinata, in ordine di priorità, agli studiosi di
+               musicologia (sia tradizionale sia computazionale), di letteratura italiana e di studi
+               teatrali; agli studenti di questi ambiti; e, infine, agli appassionati d’opera
+               interessati ad approfondire tali discipline.</p>
+            <p xml:lang="it">Questa edizione non intende offrire una trascrizione diplomatica
+               dell’opera, né riprodurre in alcun modo la topografia della pagina dei testimoni
+               impiegati. L’edizione non prende inoltre in considerazione la traduzione inglese
+               adespota pubblicata a fronte del testo italiano. Il testo del libretto non è posto in
+               relazione diretta con il testo musicale della partitura e viene pertanto studiato
+               come un oggetto culturale autonomo.</p>
+            <p xml:lang="en">This document contains a digital edition of an opera seria libretto by
+               Lorenzo Da Ponte (Cèneda, 1749 - New York, 1838). The libretto was set to music by
+               Francesco Bianchi (Cremona, 1752 - Hammersmith, London, 1810). The première was at
+               the King's Theatre, London, on February 20th, 1798. This digital edition aims to
+               facilitate comparison between the text, the hypotexts and parallel passages, and the
+               facsimiles of the witnesses.</p>
+            <p xml:lang="en">The text encoding makes the information contained in the work
+               accessible, queryable, and reusable through digital tools.</p>
+            <p xml:lang="en">The edition is intended, in order of priority, for scholars of
+               musicology (both traditional and computational), Italian and theatre studies; for
+               students in these fields; and, lastly, for opera enthusiasts interested in further
+               study of these subjects.</p>
+            <p xml:lang="en">This edition does not aim to provide a diplomatic transcription of the
+               work, nor to reproduce in any way the page layout of the witnesses employed. Nor does
+               the edition take into account the anonymous English translation printed alongside the
+               Italian text. The text of the libretto is not placed in direct relation to the
+               musical text of the score and is therefore studied as an autonomous cultural
+               artefact.</p>
+         </editionStmt>         
+             <publicationStmt>
+            <!--colmare con dati corretti-->
+            <publisher>Conservatorio di Ferrara</publisher>
+            <distributor>XXX</distributor>
+            <authority>XXX</authority>
+            <pubPlace>XXX</pubPlace>
+            <address>
+               <street>XXX</street>
+               <postCode>XXX</postCode>
+               <settlement>Città</settlement>
+               <country>Italia</country>
+            </address>
+            <idno type="DOI">XXX</idno>
+            <availability status="unknown">
+               <licence><p>XXX</p></licence>
+            </availability>
+            <date>XXXX-XX-XX</date>
+         </publicationStmt>
+         <sourceDesc>
+<!-- testimoni -->
+<listWit>
+<witness xml:id="LO98">
+<biblFull>
+<titleStmt>
+<title>Cinna</title>
+<author ref="#LDP">
+<name>
+<forename>Lorenzo</forename>
+<surname>Da Ponte</surname>
+</name>
+</author>
+</titleStmt>
+<editionStmt>
+<edition xml:lang="it">Prima edizione</edition>
+</editionStmt>
+<publicationStmt>
+<publisher>E. Jackson</publisher>
+<pubPlace>London</pubPlace>
+<date>1798</date>
+</publicationStmt>
+</biblFull>
+<msDesc type="print">
+<msIdentifier>
+<settlement>London</settlement>
+<repository>London The British Library</repository>
+<idno type="shelfmark">Gb-Lbl 907.k.5.(1)</idno>
+</msIdentifier>
+<msContents>
+<msItem>
+<docTitle>
+<titlePart type="main">CINNA.</titlePart>
+<lb/>
+<titlePart type="desc">
+A NEW SERIOUS OPERA,
+<lb/>
+IN TWO ACTS,
+<lb/>
+AS REPRESENTED AT THE
+<lb/>
+King’s Theatre
+<lb/>
+IN THE
+<lb/>
+HAYMARKET.
+<lb/>
+The MUSIC entirely New, and composed by
+<lb/>
+Mr. BIANCHI.
+<lb/>
+Part of the Poetry by N. N.
+<lb/>
+And the greatest Part by Da Ponte.
+<lb/>
+The Scene lies in SYRACUSA.
+<lb/>
+PRICE ONE SHILLING AND SIX-PENCE.
+<lb/>
+Printed by E. JACKSON.
+</titlePart>
+</docTitle>
+<colophon/>
+</msItem>
+</msContents>
+<physDesc>
+<objectDesc form="print">
+<supportDesc material="paper">
+<!-- completare opportunamente -->
+<extent>
+<dimensions scope="all" type="leaf" unit="cm">
+<height/>
+<width/>
+<depth/>
+</dimensions>
+</extent>
+</supportDesc>
+<layoutDesc>
+<layout columns="1" xml:lang="it">Impaginato in una colonna, in carattere tondo e corsivo. Traduzione inglese adespota a fronte.</layout>
+</layoutDesc>
+</objectDesc>
+<handDesc>
+<p xml:lang="it">Nessun intervento manoscritto significativo.</p>
+</handDesc>
+<decoDesc>
+<p xml:lang="it">Non sono presenti vignette ornamentali.</p>
+</decoDesc>
+<bindingDesc>
+<binding contemporary="true">
+<p>Completare</p>
+</binding>
+</bindingDesc>
+</physDesc>
+</msDesc>
+</witness>
+</listWit>
+</sourceDesc>
+<sourceDesc>
+<!-- fonti e ipotesti -->
+<listBibl>
+<bibl/>
+</listBibl>
+</sourceDesc>
+<sourceDesc>
+<!-- testi per commento -->
+<listPerson>
+<person/>
+</listPerson>
+<listBibl>
+<bibl/>
+</listBibl>
+</sourceDesc>
+</fileDesc>
+      <encodingDesc>
+         <!--criterî di redazione per il digitale-->
+         <p>[...]</p>
+         <projectDesc>
+            <p xml:lang="it">La presente edizione mira a fornire un testo critico affidabile,
+               sfruttando un nuovo modello di codifica per i libretti del secondo Settecento.
+               Particolare attenzione, nell'elaborazione del modello, è stata posta nelle soluzioni
+               atte a rendere la complessa rete intertestuale che caratterizza il libretto d'opera
+               del periodo di riferimento.</p>
+            <p xml:lang="en">The present edition aims to provide a reliable critical text by
+               employing a new encoding model for libretti from the second half of the eighteenth
+               century. Particular attention has been devoted, in the development of the model, to
+               the solutions designed to represent the complex intertextual network that
+               characterises opera libretti of the period in question.</p>
+         </projectDesc>
+         <samplingDecl>
+            <p/>
+         </samplingDecl>
+         <editorialDecl>
+			 <p>Nota al testo.</p>
+            <correction status="high" method="silent">
+               <p xml:lang="it">Sono stati emendati i seguenti errori:</p>
+               <p xml:lang="it">Argomento: puhlic] public</p>
+               <p xml:lang="it">Atto I: 1.6 Seguari] Seguaci 1.11 Segurri] Seguaci 2.41 (didascalia)
+                  intene] interna 2.74 è] e 6.157 Ottavianno] Ottaviano</p>
+               <p xml:lang="it">Atto II: 1.268 che] chi 6.400 Riscusando] Ricusando 6.401 affesa]
+                  offesa 7 (intestazione di scena) suddi] suddetti 9.468 puì] più 9.480 (didascalia)
+                  recitavo] recitativo 11(intestazione di scena) stese] stesse 11.533 cerrete]
+                  correte 12.542 (didascalia) stlie] stile.</p>
+               <p xml:lang="it">Si identifica in Cinna il locutore di I.8.235.</p>
+               <p xml:lang="it">Si identifica in Cinna il locutore di I.8.240-241.</p>
+               <p xml:lang="it">Si identifica in Servilia il locutore di I.8.242-243.</p>
+               <p xml:lang="it">Si identifica in Ottaviano il locutore di II.3.318-319 Or dimmi, ami
+                  la patria?].</p>
+               <p xml:lang="it">Si identifica in Cinna il locutore di II.6.434-437.</p>
+               <p xml:lang="it">In alcune intestazioni di scena (II.4, II.11) e didascalie
+                  (II.3.342), il nome «Ottavio» è uniformato alla forma «Ottaviano».</p>
+               <p xml:lang="it">L’edizione riguarda esclusivamente il testo italiano del libretto, e
+                  pertanto non include la traduzione inglese adespota a fronte del testo. </p>
+            </correction>
+            <normalization method="silent">
+               <p xml:lang="it">Le lettere maiuscole e minuscole sono uniformate secondo l’uso
+                  corrente. Le maiuscole sono conservate (o introdotte) per indicare personaggi
+                  allegorici, le personificazioni e i collettivi etnici. Dopo i puntini di
+                  sospensione, il punto interrogativo o il punto esclamativo si utilizza la
+                  minuscola solamente nei casi in cui il verso procede con un andamento sintattico
+                  unitario; in caso contrario, si fa uso della maiuscola.</p>
+               <p xml:lang="it">Si mantengono oscillazioni tra consonanti scempie e geminate, anche
+                  in alternanza, se la forma è storicamente attestata e riportata dai dizionari di
+                  riferimento.</p>
+               <p xml:lang="it">Si omette la «i» quando non abbia valore diacritico o distintivo,
+                  dopo la consonante palatale nei nessi «scie», «cie» e «gie», a eccezione dei casi
+                  in cui è richiesta anche dall’uso moderno; è conservata nei gruppi -iero e
+                  -ieri.</p>
+               <p xml:lang="it">È completamente eliminata la terminazione in -j nei sostantivi e
+                  negli aggettivi plurali, sostituita dalla moderna -i.</p>
+               <p xml:lang="it">I vari casi di apocope vocalica che nell'originale talora sono
+                  distinti con apostrofo, talaltra danno luogo a parole composte, sono stati
+                  trascritti sempre in relazione al loro grado di lessicalizzazione corrente (per
+                  cui si è proceduto senz'altro ad univerbazione in «mal'ora» e «bon'ora» > «malora»
+                  e «bonora», rispettando invece la forma analitica — ma eliminando l'apostrofo — in
+                  «or'ora» > «or ora»).</p>
+               <p xml:lang="it">Qualora nel testimone l’apostrofo venga usato come espediente
+                  grafico in luogo dell’accento, è normalizzato all’uso moderno (ad es. «E’» >
+                  «È»).</p>
+               <p xml:lang="it">Si scrivono unite le locuzioni pronominali («tel rendo» anziché
+                  «te’l rendo»), separate le congiunzioni («se ’l mio ben»).</p>
+               <!--Vivaldi-->
+               <p xml:lang="it">Gli avverbi composti, le locuzioni pronominali e le preposizioni
+                  articolate scritte con grafia separata sono unite, purché l’unione non comporti lo
+                  spostamento dell’accento. Sono altresì uniti i pronomi personali atoni alle forme
+                  verbali all’infinito che li precedono e che li reggono.</p>
+               <p xml:lang="it">I segni diacritici e l’accento sono regolarizzati secondo l’uso
+                  moderno; qualora assenti, sono tacitamente integrati secondo gli usi linguistici
+                  moderni. Sono introdotti accenti al fine di segnalare, dei verbi, le forme
+                  contratte, ambigue o rilevanti per l’assetto metrico: l’accento circonflesso per
+                  il perfetto indicativo (ad es.: «portâro», «gridâr») e gli altri accenti per le
+                  altre forme verbali (ad es.: «déi» per «devi», «soffòga» per «soffoca»).</p>
+               <p xml:lang="it">La congiunzione «che» adoperata nel senso di perché (interrogativo o
+                  causale) è trascritta con l’accento acuto.</p>
+               <p xml:lang="it">Nei casi di prosodia equivoca è introdotta la dieresi.</p>
+               <p xml:lang="it">Le didascalie sceniche sono riprodotte per intero e sono sempre
+                  riportate al loro luogo.</p>
+               <p xml:lang="it">I nomi dei personaggi sono sempre dati per esteso, per mezzo del
+                  marcatore <tag>speaker</tag></p>
+            </normalization>
+            <punctuation marks="some" placement="external">
+               <p xml:lang="it">L’interpunzione è integrata, espunta o corretta secondo le
+                  consuetudini moderne, al fine di rendere più agevole la comprensione del testo. È
+                  omessa la punteggiatura ridondante, priva di funzione logica o espressiva.</p>
+               <p xml:lang="it">I discorsi (1) sottovoce, (2) interiore e (3) parte sono marcati con
+                     <tag>said</tag>, seguito da <att>aloud</att>. Quest'ultimo, assume il valore
+                     <val>false</val> nei casi (1) e (2), e <val>true</val> nel caso (3). Qualora
+                  questi discorsi non siano opportunamente notati ovvero siano erroneamente presenti
+                  nel testimone di collazione, sono tacitamente integrati ovvero espunti.</p>
+               <p xml:lang="it">I trattini lunghi, singoli o multipli, presenti nei testimoni
+                  vengono normalizzati in tre punti di sospensione, parentesi, virgole o altra
+                  punteggiatura, conformemente alla funzione svolta nel testo.</p>
+               <p xml:lang="it">I punti di sospensione, che possono anche seguire un punto
+                  interrogativo o esclamativo, vengono uniformati nel numero di tre.</p>
+            </punctuation>
+            <quotation>
+               <p>Sono impiegate le virgolette basse per i discorsi diretti.</p>
+            </quotation>
+            <interpretation>
+               <p/>
+            </interpretation>
+         </editorialDecl>
+         <metDecl>
+            <metSym value="5">Quinario</metSym>
+            <metSym value="6">Senario</metSym>
+            <metSym value="7">Settenario</metSym>
+            <metSym value="8">Ottonario</metSym>
+            <metSym value="9">Novenario</metSym>
+            <metSym value="10">Decasillabo</metSym>
+            <metSym value="11">Endecasillabo</metSym>
+            <metSym value="12">Dodecasillabo</metSym>
+            <metSym value="p">Piano</metSym>
+            <metSym value="t">Tronco</metSym>
+            <metSym value="s">Sdrucciolo</metSym>
+         </metDecl>
+      </encodingDesc>
+      <profileDesc>
+         <creation>1798</creation>
+         <langUsage>
+            <language ident="it">Italiano</language>
+            <language ident="en">Inglese</language>
+         </langUsage>
+         <particDesc>
+            <listPerson>
+               <person xml:id="ottaviano" sex="male">
+                  <persName>Ottaviano</persName>
+               </person>
+               <person xml:id="servilia" sex="female">
+                  <persName>Servilia</persName>
+               </person>
+               <person xml:id="cinna" sex="male">
+                  <persName>Cinna</persName>
+               </person>
+               <person xml:id="livia" sex="female">
+                  <persName>Livia</persName>
+               </person>
+               <person xml:id="murena" sex="male">
+                  <persName>Murena</persName>
+               </person>
+               <person xml:id="agrippa" sex="male">
+                  <persName>Agrippa</persName>
+               </person>
+               <person xml:id="giulia" sex="female">
+                  <persName>Giulia</persName>
+               </person>
+               <person xml:id="coro_di_seguaci" sex="male">
+                  <persName>Coro di Seguaci</persName>
+               </person>
+               <person xml:id="coro_di_soldati" sex="male">
+                  <persName>Coro di Soldati</persName>
+               </person>
+               <person xml:id="coro_delle_ancelle" sex="female">
+                  <persName>Coro di Ancelle</persName>
+               </person>
+               <person xml:id="soldati" sex="male">
+                  <persName>Soldati</persName>
+               </person>
+               <person xml:id="duci" sex="male">
+                  <persName>Duci</persName>
+               </person>
+               <person xml:id="guardie" sex="male">
+                  <persName>Guardie</persName>
+               </person>
+               <person xml:id="prigionieri" sex="unknown">
+                  <persName>Prigionieri</persName>
+               </person>
+               <listRelation type="personal">
+                  <relation name="spouse" mutual="#ottaviano #scribonia"/>
+                  <relation name="lover_of" active="#ottaviano" passive="#livia"/>
+                  <relation name="parent" active="#ottaviano #scribonia" passive="#giulia"/>
+                  <relation name="friend" mutual="#murena #scribonia #cinna"/>
+                  <relation name="friend" mutual="#agrippa #ottaviano"/>
+               </listRelation>
+               <listRelation type="social">
+<relation name="conspirator_against" active="#cinna" passive="#ottaviano"/>
+<relation name="followers_of" active="#soldati #guardie #duci #coro_di_soldati" passive="#ottaviano"/>
+<relation name="followers_of" active="#coro_di_seguaci" passive="#murena"/>
+<relation name="followers_of" active="#coro_delle_ancelle" passive="#scribonia"/>
+<relation name="opponents_of" active="#prigionieri" passive="#ottaviano"/>
+               </listRelation>
+            </listPerson>
+         </particDesc>
+         <settingDesc>
+            <listPlace>
+               <place>
+                  <placeName xml:id="pia">piazza</placeName>
+               </place>
+               <place>
+                  <placeName xml:id="por">porto</placeName>
+               </place>
+               <place>
+                  <placeName xml:id="sol">solitudine</placeName>
+               </place>
+               <place>
+                  <placeName xml:id="reg">reggia</placeName>
+               </place>
+               <place>
+                  <placeName xml:id="tem">tempio</placeName>
+               </place>
+               <place>
+                  <placeName xml:id="cam">campo</placeName>
+               </place>
+            </listPlace>
+         </settingDesc>
+      </profileDesc>
+      <revisionDesc>
+         <!--completare se opportuno-->
+         <change/>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <prologue>
+           <p>THE ARGUMENT<lb/>
+               <persName ref="#ottaviano">Octavius</persName>, after having conquered <name>Mark
+                  Anthony</name>, and sacrificed, under the pretence of taking revenge for
+                  <name>Ceasar</name>’s death, the most illustrious citizens, supposed that there
+              remained nobody in <placeName>Rome</placeName> (so much terrified slaughter and persecution), who would dare
+               to oppose his greatness and dispute by the throne with him. There was, however,
+                  <persName ref="#cinna">Cornelius Cinna</persName>, of <name>Pompey</name>’s party,
+               who, united to <persName ref="#murena">Murena</persName>, <name>Maximus</name>, and
+               other illustrious Romans, dared to form a conspiracy against him. <persName
+                  ref="#ottaviano">Octavius</persName>, who thought that he had done away the hatred
+               of his enemies, having discovered it, was so much terrified that he was near
+               renouncing the empire, but on the advice of his wife <persName ref="#livia"
+                  >Livia</persName>, he resolved to try if he could gain the hearts of the Romans by
+               clemency. After having found <persName ref="#cinna">Cinna</persName> guilty in a
+               public trial held in the Capitol, he not only pardoned him, but elected him Consul of
+              <placeName>Rome</placeName>; and from that moment, laying aside his former fierceness and cruelty, became so
+               pacific and clement that the title of Augustus was conferred on him by the Senate.
+               The action of this drama is taken from the above history. This plan is entirely
+               different from that of <name>Corneille</name>, not on the presumption of doing
+               better, but to contribute to the brevity and the decoration of a dramatic
+               composition, to give scope to the music, and to bring the performers on the scene. We
+               do not read in history that <persName ref="#ottaviano">Octavius</persName> proscribed
+                  <persName ref="#cinna">Cinna</persName> in order to obtain the hand of
+                  <name>Scribonia</name>, nor that she entered into conspiracy. It is however known
+               that the Emperor was divorced from <name>Scribonia</name>, after having had by her
+               that <persName ref="#giulia">Julia</persName>, so famous on account of
+                  <name>Ovid</name>’s misfortunes. What has been invented for the greater effect of
+               the scene, and even the episodes, are grounded upon history. The name of
+                  <name>Scribonia</name> has been changed into that of <persName ref="#servilia"
+                  >Servilia</persName>, for the convenience of the composer of the music.</p>
+         </prologue>
+         <castList>
+            <head>DRAMATIS PERSONAE</head>
+            <castItem type="role">
+               <role><persName ref="#ottaviano">Octavius</persName></role>
+               <roleDesc>Emperor of <placeName>Rome</placeName></roleDesc> Signor
+                  <actor>Rovedino</actor></castItem>
+            <castItem type="role">
+               <role><persName ref="#servilia">Servilia</persName></role>
+               <roleDesc>wife of <persName ref="#ottaviano">Octavius</persName></roleDesc> Signora
+                  <actor>B. Banti</actor></castItem>
+            <castItem type="role">
+               <role><persName ref="#cinna">Cinna</persName></role>
+               <roleDesc>a Roman Senator, proscribed by <persName ref="#ottaviano"
+                     >Octavius</persName></roleDesc> Signor <actor>Viganoni</actor></castItem>
+            <castItem type="role">
+               <role><persName ref="#livia">Livia</persName></role>
+               <roleDesc>niece of <name>Pompey</name>, loved by <persName ref="#ottaviano"
+                     >Octavius</persName></roleDesc> Signora <actor>Pastorelli</actor></castItem>
+            <castItem type="role">
+               <role><persName ref="#murena">Murena</persName></role>
+               <roleDesc>another senator, friend to <persName ref="#servilia">Servilia</persName>
+                  and <persName ref="#cinna">Cinna</persName></roleDesc> Signor<actor>De
+                  Giovanni</actor></castItem>
+            <castItem type="role">
+               <role><persName ref="#agrippa">Agrippa</persName></role>
+               <roleDesc>friend to <persName ref="#ottaviano">Caesar</persName>, and one of the
+                  commanders of the army</roleDesc> Signor <actor>Braghetti</actor></castItem>
+            <castItem type="role">
+               <role><persName ref="#coro_delle_ancelle #coro_di_soldati #coro_di_seguaci">Chorus of
+                        <persName ref="#servilia">Servilia</persName>'s women, of soldiers of
+                        <persName ref="#ottaviano">Octavius</persName>, of senators who follow
+                        <persName ref="#murena">Murena</persName></persName></role></castItem>
+            <castItem type="role">
+               <role>Mutes</role>
+               <roleDesc><persName ref="#duci">Commanders</persName>, <persName ref="#soldati"
+                     >soldiers</persName>, and <persName ref="#guardie">guards</persName> of
+                     <persName ref="#ottaviano">Octavius</persName>. <persName ref="#prigionieri"
+                     >Prisoners</persName>.</roleDesc>
+               <persName ref="#giulia">Julia</persName>
+               <roleDesc>daughter to <persName ref="#ottaviano">Octavius</persName> and <persName
+                     ref="#servilia">Servilia</persName></roleDesc></castItem>
+         </castList>
+         <set>
+            <p>The scene is in the vicinity of the <placeName ref="#por">port</placeName> of
+               <placeName>Syracuse</placeName>, the time when <persName ref="#ottaviano">Octavius</persName> returned from
+               <placeName>Egypt</placeName>, after having conquered <name>Mark Anthony</name> and <name>Cleopatra</name>.</p>
+         </set>
+      </front>
+      <body>
+         <div1 type="act">
+            <head>Atto primo</head>
+            <div2 type="scene">
+               <head>Scena prima</head>
+               <stage type="mixed">Gran <placeName ref="#pia">piazza</placeName> adorna di archi
+                  trionfali. In prospetto il porto con la vista del mare, e gran ponte per lo sbarco
+                  dell’armata romana. <persName ref="#servilia">Servilia</persName> tra le sue
+                     <persName ref="#coro_delle_ancelle">ancelle</persName> a destra, <persName
+                     ref="#murena">Murena</persName> con alcuni Romani suoi seguaci a
+                  sinistra.</stage>
+               <div3 type="ensemble">
+                  <sp who="#coro_delle_ancelle">
+                     <speaker>Coro delle ancelle</speaker>
+                     <l met="7p">Il tuo dolore ascondi,</l>
+                     <l met="7p">serena i mesti lumi.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p">Non siete stanchi, o numi</l>
+                     <l met="7t">di farmi sospirar?</l>
+                  </sp>
+                  <sp who="#murena #coro_di_seguaci">
+                     <speaker>Murena, Coro di Seguaci</speaker>
+                     <l met="7p">Noi d'ogni torto indegno</l>
+                     <l met="7p">giuriamo a te vendetta.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p">Il vostro giusto sdegno</l>
+                     <l met="7t">conforta il mio penar.</l>
+                  </sp>
+                  <sp who="#coro_delle_ancelle #coro_di_seguaci">
+                     <speaker>Coro</speaker>
+                     <l met="7p">Il tuo dolore ascondi,</l>
+                     <l met="7p">serena i mesti lumi.</l>
+                  </sp>
+                  <spGrp>
+                     <sp who="#servilia">
+                        <speaker>Servilia</speaker>
+                        <l met="7p" xml:id="v11a">Cessate, avversi numi,</l>
+                        <l met="7t" xml:id="v12a">di farmi sospirar.</l>
+                     </sp>
+                     <sp who="#coro_delle_ancelle #coro_di_seguaci">
+                        <speaker>Coro delle Ancelle e de' Seguaci</speaker>
+                        <l met="7p" synch="#v11a">Cessate, ingiusti numi,</l>
+                        <l met="7t" synch="#v12a">di farla sospirar.</l>
+                     </sp>
+                  </spGrp>
+               </div3>
+               <div3 type="recitativo">
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p">Valorosi Romani, a tanti oltraggi</l>
+                     <l met="7p">Roma e Servilia aspetta</l>
+                     <l met="11p">sol dalla vostra fé la sua vendetta.</l>
+                  </sp>
+                  <sp who="#murena">
+                     <speaker>Murena</speaker>
+                     <l met="7p">Delle nostre promesse</l>
+                     <l met="11p">dubitar tu non dei; lo sdegno intanto</l>
+                     <l part="I">nel sen reprimi.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p" part="F">E come</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <l met="11p">potrei dissimular! sai che Ottaviano</l>
+                     <l met="11p">sol per indurmi alle sue nozze, a cui</l>
+                     <l met="11p">gran tempo invan fu questo cor restio,</l>
+                     <l met="11p">a Cinna, all’idol mio, fe’ occultamente</l>
+                     <l met="7t">toglier la vita; sai</l>
+                     <l met="7p">ch’egli appena rimase</l>
+                     <l met="11p">d’Antonio vincitor, che Livia a parte</l>
+                     <l part="I">chiamò de’ suoi trionfi.</l>
+                  </sp>
+                  <sp who="#murena">
+                     <speaker>Murena</speaker>
+                     <l met="11p" part="F">Ah, de’ tuoi torti</l>
+                     <l met="11p">questo è forse il minor! L’alma prepara</l>
+                     <l part="I">al rossor d’un ripudio.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="M">Oh ciel!</l>
+                  </sp>
+                  <sp who="#murena">
+                     <speaker>Murena</speaker>
+                     <l met="11p" part="F">Ma guarda,</l>
+                     <l met="11p">già s’appressan le navi: ora tu devi</l>
+                     <l met="7p">per non dargli sospetto</l>
+                     <l met="11p">finger costanza e simular affetto.</l>
+                  </sp>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena seconda</head>
+               <stage type="mixed">Al suon di marzial sinfonia arrivano le navi d’<persName
+                     ref="#ottaviano">Ottaviano</persName>. <persName ref="#murena"
+                     >Murena</persName> si ritira a sinistra tra i suoi <persName ref="#seguaci"
+                     >seguaci</persName>. <persName ref="#servilia">Servilia</persName> a destra tra
+                  le <persName ref="#coro_delle_ancelle">ancelle</persName>, e lasciano sgombra la
+                  scena. Scendono intanto dalle navi i <persName ref="#coro_di_soldati"
+                     >soldati</persName> che portano le insegne e i trofei. Poi alcuni <persName
+                     ref="#prigionieri">prigionieri</persName> e <persName ref="#duci"
+                     >duci</persName> ed <persName ref="#agrippa">Agrippa</persName>; infine
+                     <persName ref="#ottaviano">Ottaviano</persName>, e mentre egli s’avanza in aria
+                  maestosa, <persName ref="#agrippa">Agrippa</persName>, i <persName
+                     ref="#coro_di_soldati">soldati</persName>, <persName ref="#murena"
+                     >Murena</persName> e i <persName ref="#coro_di_seguaci">seguaci</persName>
+                  cantano il seguente.</stage>
+               <div3 type="ensemble">
+                  <stage><persName ref="#ottaviano">Ottaviano</persName>, <persName ref="agrippa"
+                        >Agrippa</persName> e <persName ref="#coro_di_soldati #coro_di_seguaci"
+                        >detti</persName>.</stage>
+                  <sp who="#ottaviano #agrippa #servilia #murena #coro_di_seguaci #coro_di_soldati">
+                     <speaker>Agrippa, Murena, Coro di Seguaci</speaker>
+                     <l met="8p">Roma esulti e il Tebro onori</l>
+                     <l met="8t">il felice vincitor.</l>
+                     <l met="8p">Nato all’ombra degli allori</l>
+                     <l met="8t">è de’ Cesari il valor.</l>
+                  </sp>
+                  <sp who="#coro_delle_ancelle">
+                     <speaker>Coro delle Ancelle</speaker>
+                     <l met="8p">Vieni in braccio alla tua sposa,</l>
+                     <l met="8t">e riposa in sen d’Amor.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="8p">Giusto ciel, che fiero istante!</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="8t">D’ira avvampo e di rossor!</l>
+                  </sp>
+                  <spGrp type="a_2" who="#ottaviano #servilia">
+                     <sp who="#ottaviano #servilia">
+                        <l met="8p">Io già leggo in quel sembiante</l>
+                        <l met="8t">ch’ha per me cangiato il cor.</l>
+                     </sp>
+                  </spGrp>
+                  <stage type="mixed">Al primo vedersi non posson nascondere l’interna agitazione, e
+                     vanno ad abbracciarsi freddamente.<persName ref="#ottaviano"
+                        >Ottaviano</persName> si accosta a <persName ref="#murena"
+                     >Murena</persName>, <persName ref="#servilia">Servilia</persName> alle sue
+                        <persName ref="coro_delle_ancelle">ancelle</persName>.</stage>
+                  <sp who="#coro_delle_ancelle">
+                     <speaker>Coro delle Ancelle</speaker>
+                     <l met="8p">Vieni in braccio alla tua sposa,</l>
+                     <l met="8t">e riposa in sen d’Amor.</l>
+                  </sp>
+                  <sp who="#ottaviano #servilia">
+                     <speaker>Ottaviano, Servilia</speaker>
+                     <l met="8p">Io già leggo in quel sembiante</l>
+                     <l met="8t">ch’ha per me cangiato il cor.</l>
+                  </sp>
+               </div3>
+               <div3 type="recitativo">
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="7p">Romani, omai vedete</l>
+                     <l met="11p">che la sorte di Roma si dichiara</l>
+                     <l met="11p">de’ Cesari a favor. L’orrida face</l>
+                     <l met="11p">porti altrove discordia, e più non torni</l>
+                     <l met="11p">d’Azio e Farsaglia a rinnovar lo scempio;</l>
+                     <l met="7p">ed esempio al Senato</l>
+                     <l met="11p">sia di Bruto il destin, d’Antonio il fato.</l>
+                  </sp>
+                  <sp who="#agrippa">
+                     <speaker>Agrippa</speaker>
+                     <l met="11p">Di Giulio i traditor, i tuoi nemici</l>
+                     <l part="I">estinti sono alfin.</l>
+                  </sp>
+                  <sp who="#murena">
+                     <speaker>Murena</speaker>
+                     <l met="11p" part="F">E già il Senato</l>
+                     <l met="11p">in prova di sua fé t’offre e destina</l>
+                     <l met="11p">un triplice trionfo, e a te l’impero</l>
+                     <l met="11p">cede di Roma, anzi del mondo intero.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="7p">Il premio che mi porge</l>
+                     <l part="I">del mio merto è maggior.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="M">Sposo...</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">Concedi</l>
+                     <l met="11p">questi istanti, o Servilia, alla mia gloria,</l>
+                     <l part="I">e di Roma al pensier.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Mi scacci, e tenti</l>
+                     <l met="11p">nascondermi il tuo cor? Dimmi piuttosto</l>
+                     <l met="11p">che alla patria non già, ma devi a Livia</l>
+                     <l part="I">questi istanti donar.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">M’offendi a torto,</l>
+                     <l met="11p">e troppo omai da’ vani tuoi sospetti</l>
+                     <l part="I">ti lasci trasportar.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Segui il costume</l>
+                     <l met="11p">di fingere e ingannar; ma pensa intanto</l>
+                     <l met="7p">che a favor degli oppressi</l>
+                     <l met="11p">vegliano i numi in ciel, e forse un giorno…</l>
+                     <l met="7p">Chi sa! tu non comprendi</l>
+                     <l met="11p">a quanto giunger può la mia costanza.</l>
+                     <l met="7p">D’un disperato core</l>
+                     <l met="11p">non provocar l’ardir! a me risparmia</l>
+                     <l met="7p">l’onta e ‘l rossore almeno</l>
+                     <l met="11p">di vederti, infedel, a Livia in seno.</l>
+                  </sp>
+               </div3>
+               <div3 type="aria" rhyme="ABBC-DEEC">
+                  <sp who="#servilia">
+                     <lg rhyme="ABBC">
+                        <l met="7p">Pensa che son tua sp<rhyme label="A">osa</rhyme>,</l>
+                        <l met="7p">pensa che son fed<rhyme label="B">ele</rhyme>,</l>
+                        <l met="7p">né sia con me crud<rhyme label="B">ele</rhyme></l>
+                        <l met="7t">quel cor che mio già f<rhyme label="B">u</rhyme>.</l>
+                     </lg>
+                     <lg rhyme="DEEC">
+                        <l met="7p">Cedi al mio pianto am<rhyme label="D">aro</rhyme>,</l>
+                        <l met="7p">al giusto mio lam<rhyme label="E">ento</rhyme>,</l>
+                        <l met="7p">rispetta il mio torm<rhyme label="E">ento</rhyme></l>
+                        <l met="7t">e più la tua virt<rhyme label="C">ù</rhyme>.</l>
+                     </lg>
+                     <stage type="exit">Parte.</stage>
+                  </sp>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena terza</head>
+               <stage type="mixed"><persName ref="#ottaviano">Ottaviano</persName>,<persName
+                     ref="#agrippa">Agrippa</persName>,<persName ref="#murena">Murena</persName>,
+                  indi <persName ref="#livia">Livia</persName>.</stage>
+               <div3 type="recitativo">
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p">Amici, a voi non celo</l>
+                     <l met="11p">gli arcani del mio cor: amo la sposa,</l>
+                     <l met="11p">obbliarla non so, ma deggio a Roma</l>
+                     <l met="11p">la pace assicurar. Se Livia accetta</l>
+                     <l met="11p">la destra mia, Roma è felice, e ‘l sangue</l>
+                     <l met="11p">lieta vedrà di Cesare congiunto</l>
+                     <l part="I">al sangue di Pompeo.</l>
+                  </sp>
+                  <sp who="#murena">
+                     <speaker>Murena</speaker>
+                     <l met="11p" part="F">Eccola appunto.</l>
+                  </sp>
+                  <sp who="#livia">
+                     <speaker>Livia</speaker>
+                     <l met="11p">Cesare, e quando fia che a me conceda</l>
+                     <l part="I">separarmi da te?</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">Livia, dovresti</l>
+                     <l met="11p">intendere il mio cor: in lui la patria</l>
+                     <l met="7p">per te mi parla, e chiede</l>
+                     <l met="7p">che in questo giorno stesso</l>
+                     <l part="I">t’offra la destra mia.</l>
+                  </sp>
+                  <sp who="#livia">
+                     <speaker>Livia</speaker>
+                     <l met="11p" part="F">Stelle! e potresti</l>
+                     <l met="11p">credermi stolta a questo segno? Ah, pensa</l>
+                     <l met="11p">chi sei tu, chi sono io! di mia famiglia</l>
+                     <l part="I">persecutor crudele…</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11t" part="F">Ah, lascia omai</l>
+                     <l part="I">sì funeste memorie.</l>
+                  </sp>
+                  <sp who="#livia">
+                     <speaker>Livia</speaker>
+                     <l met="11p" part="F">Odimi, forse</l>
+                     <l met="11p">mi potresti sedur, se in te vedessi</l>
+                     <l met="11p" part="I">di Roma un figlio, un cittadin…</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">T’intendo.</l>
+                     <l met="7p">Io la virtude apprendo</l>
+                     <l met="11p">dai rimproveri tuoi; il nome mio</l>
+                     <l met="11p">caro a Roma sarà! Concordia e pace</l>
+                     <l met="11p">fia che tosto succeda a tanto orrore,</l>
+                     <l met="11p">se giungo a meritar di Livia il core.</l>
+                     <stage type="exit">Parte.</stage>
+                  </sp>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena quarta</head>
+               <stage><persName ref="#livia">Livia</persName>,<persName ref="#agrippa">Agrippa</persName>.</stage>
+               <div3 type="recitativo">
+                  <sp who="#agrippa">
+                     <speaker>Agrippa</speaker>
+                     <l met="7p">Non mi dicesti, o Livia,</l>
+                     <l part="I">che d’Ottaviano eri tu amante?</l>
+                  </sp>
+                  <sp who="#livia">
+                     <speaker>Livia</speaker>
+                     <l met="11p" part="F">E il sono</l>
+                     <l met="11p">per mia sventura ancor: ma però sempre</l>
+                     <l met="11p">arbitra fui di me medesma, e ad onta</l>
+                     <l met="7p">ch’io pianga e frema e senta</l>
+                     <l met="11p">crescer la fiamma del mio cor insana,</l>
+                     <l met="11p">non mi scordo però d’esser Romana.</l>
+                     <stage type="exit">Parte.</stage>
+                  </sp>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena quinta</head>
+               <stage><persName ref="#agrippa">Agrippa</persName>solo.</stage>
+               <div3 type="recitativo">
+                  <sp who="#agrippa">
+                     <speaker>Agrippa</speaker>
+                     <l met="11p">Per la pace di Roma Amor secondi</l>
+                     <l met="11p">la speranza comune, onde si vegga</l>
+                     <l met="11p">per virtù d’un tal nodo alfin sereno</l>
+                     <l met="11p">spuntar il giorno a tante nubi in seno.</l>
+                  </sp>
+               </div3>
+            </div2>
+            <div2 type="scene">
+				<head>Scena sesta</head>
+                <stage type="mixed">Amena <placeName ref="sol">solitudine</placeName> a’ piedi d’un
+                  monte che si vede in prospetto. Nel mezzo, ampia grotta. A destra, alcune colline
+                  sparse di capanne. A sinistra, oscuro bosco ingombro di piante, una delle quali
+                  nel mezzo della scena. <persName ref="#cinna">Cinna</persName>senz’elmo e spada
+                  seduto sotto una pianta a sinistra, <persName ref="#servilia"
+                  >Servilia</persName>che esce a destra senza vederlo.</stage>
+               <div3 type="aria" rhyme="ABBC">
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="8p">Tra l’orror di mie svent<rhyme label="A">ure</rhyme>,</l>
+                     <l met="8p">tra le smanie e ‘l duol che pr<rhyme label="B">ovo</rhyme>,</l>
+                     <l met="8p">care selve in voi ritr<rhyme label="B">ovo</rhyme></l>
+                     <l met="8t">qualche istante di piac<rhyme label="C">er</rhyme>.</l>
+                  </sp>
+               </div3>
+               <div3 type="recitativo">
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     
+                     <l met="7p"><said aloud="false" xml:id="aside-v123" next="#aside-v123-2">Ecco, Servilia, il loco</said></l>
+                     <l met="11p"><said aloud="false" xml:id="aside-v123-2" prev="#aside-v123" next="#aside-v123-3">opportuno al tuo duol: qui di lagnarti</said></l>
+                     <l met="11p"><said aloud="false" xml:id="aside-v123-3" prev="#aside-v123-2" next="#aside-v123-4">la libertà ti fia concessa almeno</said></l>
+                     <l met="11p"><said aloud="false" xml:id="aside-v123-4" prev="#aside-v123-3">fra quelle piante, o a quello speco in seno.</said></l>
+                     
+                     
+                  </sp>
+               </div3>
+               <div3 type="aria" rhyme="AB">
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="8p">Care selve, in voi ritr<rhyme label="A">ovo</rhyme></l>
+                     <l met="8t">qualche istante di piac<rhyme label="B">er</rhyme>.</l>
+                  </sp>
+               </div3>
+               <div3 type="recitativo">
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="I"><said aloud="false">Qual voce! Qual
+                           sembiante!</said><stage>Scorgendo Cinna.</stage></l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p" part="F"><said aloud="false" xml:id="aside-v129" next="#aside-v129-2">E chi è costei</said></l>
+                     <l met="11p">
+                        <said aloud="false" xml:id="aside-v129-2" prev="#aside-v129">che sì lenta e sospesa a me sen viene?</said>
+                        <stage>Scorgendo Servilia.</stage></l>
+                  </sp>
+               </div3>
+               <div3 type="ensemble" subtype="duet">
+                  <spGrp type="a_2" who="#cinna #servilia">
+                     <sp who="#cinna #servilia">
+                        <l met="7p">Stelle! non è il mio bene?</l>
+                        <l met="7t">Forse m’inganna Amor.</l>
+                        <l met="7s">Ah, lo conosco ai palpiti</l>
+                        <l met="7t">ond’agitato ho il cor.</l>
+                     </sp>
+                  </spGrp>
+               </div3>
+               <div3 type="recitativo">
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="I">Cinna...</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="M">Servilia...</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Oh ciel! Dunque tu vivi!</l>
+                     <l met="11p">Deh, qual mai ti condusse infausta stella</l>
+                     <l part="I">a questi lidi?</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="7p" part="F">È noto</l>
+                     <l met="7p">come a salvar la patria</l>
+                     <l met="11p">in cui spargea discordia, orrore e morte</l>
+                     <l met="7p">io seguitai la sorte</l>
+                     <l met="11p">del figlio di Pompeo: da ch’ei soggiacque</l>
+                     <l met="11p">all’armi di Ottavian, all’odio, all’ire</l>
+                     <l met="7p">del vincitor crudele</l>
+                     <l met="11p">io mi sottrassi, e in quest’occulto bosco</l>
+                     <l met="11p">vissi finor, se pur viver può dirsi</l>
+                     <l met="11p">quello che in questa piaggia erma e romita</l>
+                     <l met="11p">trassi lungi da te, dolce mia vita.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p">Deh, Cinna, e perché mai</l>
+                     <l met="11p">celarmi il tuo destin? io non avrei,</l>
+                     <l met="11p">or che il fato pietoso a te mi guida,</l>
+                     <l met="11p">il rimorso e il rossor d’esserti infida.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="I">Tu infida! tu?… per chi?</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Per Ottaviano!</l>
+                  </sp>
+                  <stage type="mixed">Qui si vedranno in distanza passar due <persName ref="soldati"
+                        >soldati</persName> ascoltar, pochi istanti, indi ritirarsi.</stage>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="I">O tradimento! Ingrata!</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Ah, cessa, cessa</l>
+                     <l met="11p">d’accrescer le mie pene! Ancor se vuoi</l>
+                     <l part="I">posso, o caro, esser tua.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p" part="F">Come? in qual guisa?</l>
+                     <l met="7t">Dimmi, che far degg’io?</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11t">Va’, trafiggi Ottaviano, e tua son io.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="I">Stelle! il tuo sposo!</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Di mio sposo il nome</l>
+                     <l met="11p">non merta un traditor. Benché giammai</l>
+                     <l met="11p">io nol potessi amar, pure di sposa</l>
+                     <l met="7p">il dover e la fede</l>
+                     <l part="I">mai non posi in obblio.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="M">Ed egli?</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Stanco</l>
+                     <l met="7p">di possedermi, a Livia</l>
+                     <l met="11p">volto ha il suo cor: del mio ripudio il foglio</l>
+                     <l part="I">forse è segnato.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="M">Oh ciel! Dunque…</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">L’oltraggio</l>
+                     <l met="11t">dei prevenir, dei meritarmi, dei</l>
+                     <l met="11p">far in un colpo sol mille vendette.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="I">Ah, mio ben!</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="M">Che paventi?</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p" part="F">Il tuo periglio.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p">Non più. M’udisti: è vano</l>
+                     <l met="11p">il replicar. Se ardir non hai, rinunzia</l>
+                     <l met="7p">a questa mano e sappi</l>
+                     <l met="11p">che ad altri, già de’ miei sofferti torti</l>
+                     <l met="11p">vendicator, men vili io la promisi.</l>
+                     <l met="7t">Pensa, e risolvi: addio.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11t">Attendi: ho già risolto, idolo mio.</l>
+                  </sp>
+               </div3>
+               <div3 type="aria" rhyme="ABCB-DEDE">
+                  <sp who="#cinna">
+                     <lg rhyme="ABCB">
+                        <l met="7t">Nacqui sul Tebro, il s<rhyme label="A">ai</rhyme>:</l>
+                        <l met="7t">ho di Romano il c<rhyme label="B">or</rhyme>.</l>
+                        <l met="7p">M’empie il mio stesso aff<rhyme label="C">etto</rhyme></l>
+                        <l met="7t">del giusto tuo fur<rhyme label="B">or</rhyme>.</l>
+                     </lg>
+                     <lg rhyme="DEDE">
+                        <l met="7p">Sai che il mio cor t’ad<rhyme label="D">ora</rhyme>,</l>
+                        <l met="7t">che vivi sola in m<rhyme label="E">e</rhyme>,</l>
+                        <l met="7p">e che la morte anc<rhyme label="D">ora</rhyme></l>
+                        <l met="7t">sfidar saprei per t<rhyme label="E">e</rhyme>.</l>
+                     </lg>
+                     <stage type="exit">Parte.</stage>
+                  </sp>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena settima</head>
+               <stage type="mixed"><persName ref="#servilia">Servilia</persName>, indi<persName
+                     ref="#ottaviano">Ottaviano</persName>.</stage>
+               <div3 type="recitativo">
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p">Trema, Ottavian; paventa</l>
+                     <l met="7p">d’una sposa tradita</l>
+                     <l part="I">il coraggio e ’l furor.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">In questi lochi</l>
+                     <l met="11p">senza le ancelle sue che fa, che cerca</l>
+                     <l met="7p">di Cesare la sposa?</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p"><said aloud="false">Numi!</said> Signor… <said aloud="false">Che deggio dir?</said>… io cerco…</l>
+                     <l met="11p">qui alcun non v’è – tu sai – cerco un asilo</l>
+                     <l part="I">alle lagrime mie.</l>
+                     <stage>Prendendo coraggio a poco a poco.</stage>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">E chi è colui</l>
+                     <l met="7p">che poc’anzi fu visto</l>
+                     <l met="11p" part="I">teco parlar?</l>
+                     <stage type="delivery">Ironicamente.</stage>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="M">Io nol conosco.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">Invano</l>
+                     <l met="11p">ingannarmi tu speri: in questo istante</l>
+                     <l met="11t">cinta de’ miei guerrieri farò che sia</l>
+                     <l met="11p">questa foresta. Indarno speri alcuno</l>
+                     <l met="11p">nascondersi o fuggir: vedrò costui.</l>
+                     <l met="11p">E se m’inganni, io ti proscrivo, io sciolgo</l>
+                     <l part="I">ogni laccio con te.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F"><said aloud="false">Numi! che faccio!</said></l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l part="I">Ebben!</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="M">Signor… <said aloud="false">Che mai dirò?</said></l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">T’intendo:</l>
+                     <l met="11p">quella tua confusion, quei tronchi detti…</l>
+                     <l part="I">Basta così, ma trema.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">I tuoi sospetti…</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p">Giusti son, tu lo sai; ma indarno ancora</l>
+                     <l met="11p">cogli artifici tuoi sedur mi tenti,</l>
+                     <l met="11p">ch’io ti leggo nel core, e so che menti.</l>
+                  </sp>
+               </div3>
+               <div3 type="aria" rhyme="ABBC-DEEC">
+                  <sp who="ottaviano">
+                     <lg rhyme="ABBC">
+                        <l met="7p">Sempre ti vidi in fr<rhyme label="A">onte</rhyme></l>
+                        <l met="7p">l’odio che serbi in p<rhyme label="B">etto</rhyme>:</l>
+                        <l met="7p">di sposa il vero aff<rhyme label="B">etto</rhyme></l>
+                        <l met="7t">non ebbi mai da t<rhyme label="C">e</rhyme>.</l>
+                     </lg>
+                     <lg rhyme="DEEC">
+                        <l met="7p">Io nell’amarti, ingr<rhyme label="D">ata</rhyme>,</l>
+                        <l met="7p">io fui finor lo st<rhyme label="E">esso</rhyme>,</l>
+                        <l met="7p">e se mi cangio ad<rhyme label="E">esso</rhyme></l>
+                        <l met="7t">non ti lagnar di m<rhyme label="C">e</rhyme>.</l>
+                     </lg>
+                     <stage type="exit">Parte.</stage>
+                  </sp>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena ottava</head>
+               <stage type="mixed"><persName ref="#servilia">Servilia</persName>, indi <persName
+                     ref="#cinna">Cinna</persName>, con elmo e spada.</stage>
+               <div3 type="recitativo">
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p">Numi, che mai farò? Cinna è in periglio,</l>
+                     <l met="11p">ed io stessa con lui. Se almen potessi</l>
+                     <l met="7p">additargli alla fuga</l>
+                     <l met="11p">qualche occulto sentier – ah, un sol momento…</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p">Eccomi, o vita mia, pronto al cimento.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="I">Cinna… ah, fuggi… t’affretta…</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p" part="F">Oh ciel! che dici?</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p">Cingeranno tra poco il bosco tutto</l>
+                     <l met="11p">le schiere d’Ottavian; teco fui vista</l>
+                     <l part="I">pur dianzi ragionar.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="M">Che temi?</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Ei stesso</l>
+                     <l met="11p">qui mi sorprese. Ah! se ti scopre alcuno</l>
+                     <l met="7p">siamo entrambi perduti.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="I">Con questo ferro…</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="M">È inutile!</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p" part="F">La morte,</l>
+                     <l met="11p">cara, io voglio incontrar pria di lasciarti.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p">Se m’ami, per pietà, salvati, parti.</l>
+                  </sp>
+               </div3>
+               <div3 type="ensemble" subtype="finale">
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="I">Ch’io parta!</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="6p" part="F">Lo chiedo</l>
+                     <l met="6p">per prova d’amore.</l>
+                     <l part="I">Che pensi?</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="6p" part="F">Mio core,</l>
+                     <l met="6t">vo’ prima morir.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="6p">Non curi la vita?</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="6p">Di Roma son figlio.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="6p">Ma il nostro periglio…</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="6t">M’accresce l’ardir.</l>
+                  </sp>
+                  <spGrp type="a_2" who="#cinna #servilia">
+                     <sp who="#cinna #servilia">
+                        
+                        <l met="6p"><said aloud="false" xml:id="aside-v236" next="#aside-v236-2">In tali momenti</said></l>
+                        <l met="6p"><said aloud="false" xml:id="aside-v236-2" prev="#aside-v236" next="#aside-v236-3">oppressa è quest’alma.</said></l>
+                        <l met="6p"><said aloud="false" xml:id="aside-v236-3" prev="#aside-v236-2" next="#aside-v236-4">Mi mancan gli accenti,</said></l>
+                        <l met="6t"><said aloud="false" xml:id="aside-v236-4" prev="#aside-v236-3">non posso parlar.</said></l>
+                        
+                        
+                     </sp>
+                  </spGrp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     
+                     <l met="6p"><said aloud="false" xml:id="aside-v240" next="#aside-v240-2">La smania… l’affanno</said></l>
+                     <l met="6p"><said aloud="false" xml:id="aside-v240-2" prev="#aside-v240">mi lacera il core.</said></l>
+                     
+                     
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     
+                     <l met="6p"><said aloud="false" xml:id="aside-v242" next="#aside-v242-2">Non ho in tal cimento</said></l>
+                     <l met="6p"><said aloud="false" xml:id="aside-v242-2" prev="#aside-v242">costanza e valore.</said></l>
+                     
+                     
+                  </sp>
+                  <spGrp type="a_2" who="#cinna #servilia">
+                     <sp who="#cinna #servilia">
+                        
+                        <l met="6p"><said aloud="false" xml:id="aside-v244" next="#aside-v244-2">Che dura mercede</said></l>
+                        <l met="6p"><said aloud="false" xml:id="aside-v244-2" prev="#aside-v244" next="#aside-v244-3">si rende alla fede!</said></l>
+                        <l met="6p"><said aloud="false" xml:id="aside-v244-3" prev="#aside-v244-2" next="#aside-v244-4">Mi mancan gli accenti,</said></l>
+                        <l met="6t"><said aloud="false" xml:id="aside-v244-4" prev="#aside-v244-3">non posso parlar.</said></l>
+                        
+                        
+                     </sp>
+                  </spGrp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="I">Ascolta…</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="6p" part="F">Non parti?</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="6p">Non posso lasciarti.</l>
+                  </sp>
+                  <spGrp type="a_2" who="#cinna #servilia">
+                     <sp who="#cinna #servilia">
+                        <l met="6t">Mi sento mancar.</l>
+                        <l met="7s">Ah, che pietà non trovano</l>
+                        <l met="7p">nel cielo i pianti miei!</l>
+                        <l met="7p">Quando fia stanca, oh dei,</l>
+                        <l met="7t">la vostra crudeltà.</l>
+                     </sp>
+                  </spGrp>
+               </div3>
+            </div2>
+         </div1>
+         <div1 type="act">
+            <head>Atto secondo</head>
+            <div2 type="scene">
+               <head>Scena prima</head>
+               <stage type="mixed">Galleria nella <placeName ref="reg">reggia</placeName> di
+                  <placeName>Siracusa</placeName>. <persName ref="#ottaviano">Ottaviano</persName> e <persName
+                     ref="#agrippa">Agrippa</persName>.</stage>
+               <div3 type="recitativo">
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p">Quello stranier che di Servilia al fianco</l>
+                     <l met="7p">pur dianzi era nel bosco</l>
+                     <l part="I">è dunque in mio poter?</l>
+                  </sp>
+                  <sp who="#agrippa">
+                     <speaker>Agrippa</speaker>
+                     <l met="11p" part="F">A te fra poco</l>
+                     <l part="I">tratto ei sarà.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l part="M">Sai tu chi sia?</l>
+                  </sp>
+                  <sp who="#agrippa">
+                     <speaker>Agrippa</speaker>
+                     <l met="11p" part="F">Nol vidi.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="7p">T’affretta: di vederlo</l>
+                     <l part="I">impaziente io son.</l>
+                  </sp>
+                  <sp who="#agrippa">
+                     <speaker>Agrippa</speaker>
+                     <l met="11t" part="F">Ma di costui</l>
+                     <l part="I">quale hai sospetto?</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">E di chi mai non deggio,</l>
+                     <l met="11p">amico, sospettar? Ah, non ho pace!</l>
+                     <l met="11p">E più che cerco meritarmi il trono</l>
+                     <l met="11p">conosco – oh, ciel! – che più infelice io sono.</l>
+                  </sp>
+                  <sp who="#agrippa">
+                     <speaker>Agrippa</speaker>
+                     <l met="11p">Signor, s’ami la pace a te fa d’uopo</l>
+                     <l met="11p">con altre armi pugnar: de’ tuoi vassalli</l>
+                     <l met="11p">cerca l’amor, benefica, soccorri</l>
+                     <l met="11p">chi di mercé, chi di soccorso è degno,</l>
+                     <l met="11p">allor vedrai quanto sia dolce il regno.</l>
+                  </sp>
+               </div3>
+               <div3 type="aria" rhyme="ABBC-DEEC">
+                  <sp who="#agrippa">
+                     <speaker>Agrippa</speaker>
+                     <lg rhyme="ABBC">
+                        <l met="8p">Nell’amor de’ tuoi vass<rhyme label="A">alli</rhyme></l>
+                        <l met="8p">cerca ognor la tua dif<rhyme label="B">esa</rhyme>,</l>
+                        <l met="8p">sol tua gloria in ogni impr<rhyme label="B">esa</rhyme></l>
+                        <l met="8t">sia l’altrui felicit<rhyme label="C">à</rhyme>.</l>
+                     </lg>
+                     <lg rhyme="DEEC">
+                        <l met="8p">Odia un labbro che t’ing<rhyme label="D">anna</rhyme>,</l>
+                        <l met="8p">ama quel che dice il v<rhyme label="E">ero</rhyme>,</l>
+                        <l met="8p">ed il peso dell’imp<rhyme label="E">ero</rhyme></l>
+                        <l met="8t">dolce premio a te sar<rhyme label="C">à</rhyme>.</l>
+                     </lg>
+                     <stage type="exit">Parte.</stage>
+                  </sp>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena seconda</head>
+               <stage type="mixed"><persName ref="#ottaviano">Ottaviano</persName>, <persName
+                     ref="#servilia">Servilia</persName>, poi <persName ref="#cinna"
+                     >Cinna</persName> disarmato tra le guardie.</stage>
+               <div3 type="recitativo">
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="7p">Quanto giova il consiglio</l>
+                     <l met="11p">d’un amico fedel! omai convinto</l>
+                     <l part="I">da quel saggio parlar…</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Crudele, hai vinto.</l>
+                     <l met="7p">Trionfa pur, esulta</l>
+                     <l part="I">del mio dolor.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">Che dici? io non t’intendo.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p">La vittima che tanto</l>
+                     <l met="7p">tu cercasti finora</l>
+                     <l met="11p">è in tuo potere alfin: vedila, mira</l>
+                     <l met="7p">qual novello trionfo</l>
+                     <l met="11p">al tuo barbaro core ha il ciel concesso!</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p">Numi! Cinna?… infedel, t’intendo adesso.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="7p"><said aloud="false" xml:id="aside-L1219" next="#aside-L1219-2">Tra l’amante e il tiranno</said></l>
+                        <l part="I"><said aloud="false" xml:id="aside-L1219-2" prev="#aside-L1219">gelo e fremo d’orror!</said></l>
+                     
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">Perfida! è questo</l>
+                     <l met="11p">quello stranier che non conosci? è questa</l>
+                     <l part="I">la vantata tua fé?</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Se chi procura</l>
+                     <l met="7p">salvar un innocente</l>
+                     <l met="11p">divien reo presso te, son rea, nol nego.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="7p">Ah, di scusarti, infida,</l>
+                     <l met="11p">tempo or non è! Dell’infelice figlia</l>
+                     <l met="11p">ben compiango il destin, ma padre a lei</l>
+                     <l met="11p">sempre io sarò. Vanne: tra brevi istanti</l>
+                     <l met="7p">sarà disciolto il nodo</l>
+                     <l part="I">che mi congiunge a te.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Da un fier tiranno</l>
+                     <l met="11p">questo scorno attendea, ma forse in pace</l>
+                     <l met="11p">tu non godrai del tuo trionfo: temi…</l>
+                     <l met="7p">Ah sì, temi tu stesso</l>
+                     <l met="11p">gli effetti ancor d’un disperato eccesso.</l>
+                  </sp>
+               </div3>
+               <div3 type="aria" rhyme="ABAC">
+                  <sp who="#servilia">
+                     <l met="7p">Guardami: sai chi s<rhyme label="A">ono</rhyme>.</l>
+                     <l met="7p">Il sangue mio ramm<rhyme label="B">enta</rhyme>.</l>
+                     <l met="7p">E se mi togli il tr<rhyme label="A">ono</rhyme>,</l>
+                     <l met="7t">tu non mi togli il c<rhyme label="C">or</rhyme>.</l>
+                     <stage type="exit">Parte.</stage>
+                  </sp>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena terza</head>
+               <stage type="mixed"><persName ref="#ottaviano">Ottaviano</persName> e <persName ref="#cinna">Cinna</persName>.</stage>
+               <div3 type="recitativo">
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l part="I">Accostati.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="7p" part="F">A che tardi,</l>
+                     <l part="I">Cesare, a vendicarti?</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">Olà, di Cinna</l>
+                     <l part="I">a me si rechi il ferro.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p" part="F">Orsù, t’affretta</l>
+                     <l part="I">d’un tuo nemico a liberarti.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">Prendi:</l>
+                     <l met="7p">ritorni quell’acciaro</l>
+                     <l met="11p">di bel novo al tuo fianco. In questa guisa</l>
+                     <l met="7p">deposto l’odio antico</l>
+                     <l met="11p">si libera Ottavian d’un suo nemico.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p">Oh, ciel! sogno? vaneggio? a tal virtude</l>
+                     <l part="I">Cesare ben io riconosco.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">Or dimmi,</l>
+                     <l part="I">ami la patria?</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p" part="F">Se l’amo! ah, che per lei</l>
+                     <l part="I">io ti chieggo pietà!</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">Dunque m’ascolta.</l>
+                     <l met="7p">Tu sai che l’odio e l’ira</l>
+                     <l met="11p">de’ Cesari e Pompei di nostri mali</l>
+                     <l met="11t" part="I">fur la sola cagion.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="M">M’è noto.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">Sai</l>
+                     <l met="11p">che della stirpe di Pompeo non resta</l>
+                     <l part="I">altri che Livia.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="M">Il so.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">Roma richiede</l>
+                     <l met="11p">per la comun tranquillità che tosto</l>
+                     <l met="7p">io mi congiunga a lei.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="I">E chi tel vieta?</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">Di Servilia inquieta</l>
+                     <l met="11p">mi trattiene il furor. So che tu l’ami,</l>
+                     <l met="11p">ch’ella t’amò… Del mio ripudio il foglio</l>
+                     <l met="11p">recato a lei sarà: tu dei placarla,</l>
+                     <l met="11p">consolarla tu dei, tu dei sposarla.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="7p">Vado, sarà mia cura</l>
+                     <l met="11p">calmar gli sdegni di quel core altero.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p">E la pace di Roma è mio pensiero.</l>
+                  </sp>
+               </div3>
+               <div3 type="ensemble" subtype="duet">
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="8p">Non temer: io già rammento</l>
+                     <l met="8p">ciò che Roma e Amor richiede.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="8p">Vanne pur: giammai di fede</l>
+                     <l met="8t">non può Cesare mancar.</l>
+                  </sp>
+                  <spGrp type="a_2" who="#cinna #ottaviano">
+                     <sp who="#cinna #ottaviano">
+                        <l met="8p">Serbi il cor sì bella speme</l>
+                        <l met="8p">ch’alla patria e al caro bene</l>
+                        <l met="8t">può la pace alfin donar.</l>
+                     </sp>
+                  </spGrp>
+                  <stage type="mixed">
+                     <persName ref="#cinna">Cinna</persName> parte da sinistra, e <persName
+                        ref="#ottaviano">Ottaviano</persName> nell’atto di partire vede <persName
+                        ref="#agrippa">Agrippa</persName> con <persName ref="#livia"
+                        >Livia</persName> e si ferma.</stage>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena quarta</head>
+              <stage type="mixed"><persName ref="#ottaviano">Ottaviano</persName>, <persName
+                     ref="#livia">Livia</persName> e <persName ref="#agrippa">Agrippa.</persName></stage>
+               <div3 type="recitativo">
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="7p">Agrippa, in traccia appunto</l>
+                     <l part="I">di te venia.</l>
+                  </sp>
+                  <sp who="#agrippa">
+                     <speaker>Agrippa</speaker>
+                     <l part="M">Che chiedi?</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p" part="F">In questo foglio</l>
+                     <l met="7p">di Servilia il ripudio</l>
+                     <l met="7p">segnai pur or: ad essa</l>
+                     <l met="11p">recalo in nome mio. Livia, rammenta</l>
+                     <l met="7p">che ’l destin d’Ottaviano</l>
+                     <l met="11p">e la pace di Roma ora è in tua mano.</l>
+                  </sp>
+                  <sp who="#livia">
+                     <speaker>Livia</speaker>
+                     <l part="I">Oh ciel!</l>
+                  </sp>
+                  <sp who="#agrippa">
+                     <speaker>Agrippa</speaker>
+                     <l met="7p" part="F">Livia, che dici?</l>
+                  </sp>
+                  <sp who="#livia">
+                     <speaker>Livia</speaker>
+                     <l part="I">Son fuor di me.</l>
+                  </sp>
+                  <sp who="#agrippa">
+                     <speaker>Agrippa</speaker>
+                     <l met="11p" part="F">Dell’amor tuo poss’io</l>
+                     <l met="11p">Cesare assicurar? Spiegati: tutto</l>
+                     <l met="11p">mi palesa il tuo cor, il ver confessa.</l>
+                  </sp>
+                  <sp who="#livia">
+                     <speaker>Livia</speaker>
+                     <l met="11p">Che posso dir, se non m’intendo io stessa?</l>
+                  </sp>
+                  <stage type="exit">Partono.</stage>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena quinta</head>
+               <stage type="mixed">Atrio d’un <placeName ref="tem">tempio</placeName> con portici a
+                  destra ed a sinistra. In prospetto magnifica porta praticabile che introduce al
+                     <placeName ref="tem">tempio</placeName> stesso. <persName ref="#servilia"
+                     >Servilia</persName>, <persName ref="#murena">Murena</persName>, indi <persName
+                     ref="#cinna">Cinna</persName>.</stage>
+               <div3 type="recitativo">
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p">Ah, dimmi: i noti amici,</l>
+                     <l part="I">Murena, dove son?</l>
+                  </sp>
+                  <sp who="#murena">
+                     <speaker>Murena</speaker>
+                     <l met="11p" part="F">In questo tempio</l>
+                     <l met="11p">son già raccolti. Qui dobbiamo insieme</l>
+                     <l met="11p">ordir la impresa, e della nostra fede</l>
+                     <l part="I">chiamar vindice il ciel.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Perché si tarda</l>
+                     <l met="11p" part="I">il tiranno a svenar?</l>
+                  </sp>
+                  <sp who="#murena">
+                     <speaker>Murena</speaker>
+                     <l met="11p" part="F">S’attende solo</l>
+                     <l part="I">della notte il favor.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">E Cinna intanto</l>
+                     <l met="7p">della vita in periglio,</l>
+                     <l met="11p">d’Ottaviano in poter… deh, si prevenga</l>
+                     <l met="11p">questo colpo fatal! s’avvien ch’ei mora…</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p">T’assicura, mio ben, son vivo ancora.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="I">Grazie, o numi del ciel!</l>
+                  </sp>
+                  <sp who="#murena">
+                     <speaker>Murena</speaker>
+                     <l met="11p" part="F">Un fausto evento</l>
+                     <l met="11p">per la patria a sperar comincio adesso.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="I">E chi ti liberò?</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p" part="F">Cesare stesso.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="I">Che sento? egli? il tiranno?…</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p" part="F">Ah, se tu vuoi</l>
+                     <l met="7p">da te, cara, dipende</l>
+                     <l part="I">la mia felicità.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="M">Deh, parla!</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p" part="F">Approva</l>
+                     <l met="11p">Cesare il nostro affetto, e spezza il nodo</l>
+                     <l met="11p">che ad onta del tuo core a lui ti stringe.</l>
+                     <l met="7p">Se in lui perdi lo sposo,</l>
+                     <l met="11p">tu lo ritrovi in me. Calmati, e paga</l>
+                     <l met="11t">d’un cor che sai quanto fedel ti sia</l>
+                     <l met="11t">scorda l’oltraggio, e la vendetta obblia.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p">Numi! che sento! Cinna,</l>
+                     <l met="11p">a me parli così? Ah, se non sai</l>
+                     <l met="7p">quel che devi alla patria,</l>
+                     <l met="11p">quel ch’hai promesso a me, se a’ torti miei,</l>
+                     <l met="7p">se al nome di Romano</l>
+                     <l met="11p">d’una eroica virtù più non t’accendi,</l>
+                     <l met="11p">leggi in que’ volti, e il tuo dovere apprendi.</l>
+                      <stage type="mixed"><persName ref="#servilia">Servilia</persName> spalanca la
+                        porta del tempio; vi si vedono i <persName ref="coro_di_seguaci">seguaci di
+                           Murena</persName> intorno all’ara e <persName ref="#murena"
+                           >Murena</persName> stesso.</stage>
+                  </sp>
+               </div3>
+               <div3 type="coro" rhyme="ABAB">
+                  <sp who="#coro_di_seguaci">
+                     <speaker>Coro</speaker>
+                     <l met="7s">Pera, Ottavian: quel b<rhyme label="A">arbaro</rhyme></l>
+                     <l met="7t">non trovi in noi piet<rhyme label="B">à</rhyme>;</l>
+                     <l met="7s">in faccia a morte intr<rhyme label="A">epido</rhyme></l>
+                     <l met="7t">il nostro ardir sar<rhyme label="B">à</rhyme>.</l>
+                  </sp>
+               </div3>
+               <div3 type="recitativo">
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l part="I">Udisti?</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p" part="F">Oh cielo! a qual fatal cimento</l>
+                     <l met="11p">esponi l’alma mia?… di te il mio core,</l>
+                     <l met="11p">cara, indegno non è… ma alfine ingrato</l>
+                     <l part="I">al suo liberator…</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Ebben, t’intendo.</l>
+                     <l met="7p">A Cesare tu devi</l>
+                     <l met="12" real="11p">grato serbarti, io pur grata esser deggio</l>
+                     <l met="11p">al mio vendicator; sarò sua sposa,</l>
+                     <l met="7t">e mancar non degg’io.</l>
+                     <l met="11p">La legge or sai: pensa e risolvi. Addio.</l>
+                  </sp>
+                  <stage who="#servilia" type="exit">Parte con <persName ref="#murena"
+                        >Murena</persName> e <persName ref="coro_di_seguaci"
+                     >seguaci</persName>.</stage>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena sesta</head>
+               <stage type="mixed"><persName ref="#cinna">Cinna</persName> e alcuni<persName
+                     ref="#coro_di_soldati">guerrieri</persName>.</stage>
+               <div3 type="recitativo">
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p">Che intesi, eterni dei! deggio alle brame</l>
+                     <l met="7p">di Servilia ubbidire?</l>
+                     <l met="7p">Ricusando l’impresa</l>
+                     <l met="11p">deggio i sdegni irritar dell’alma offesa?</l>
+                  </sp>
+               </div3>
+               <div3 type="coro" rhyme="ABABCDED">
+                  <sp who="#coro_di_soldati">
+                     <speaker>Coro</speaker>
+                     <l met="5p">Come turb<rhyme label="A">ato</rhyme></l>
+                     <l met="5p">smania e sosp<rhyme label="B">ira</rhyme>!</l>
+                     <l met="5p">Come agit<rhyme label="A">ato</rhyme></l>
+                     <l met="5p">qua e là s’agg<rhyme label="B">ira</rhyme>!</l>
+                     <l met="5s">In lui contr<rhyme label="C">astano</rhyme></l>
+                     <l met="5t">dover e am<rhyme label="D">or</rhyme>.</l>
+                     <l met="5s">Quel duol che t’<rhyme label="E">agita</rhyme></l>
+                     <l met="5t">frena, o sign<rhyme label="D">or</rhyme>.</l>
+                  </sp>
+               </div3>
+               <div3 type="recitativo">
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="7p">A chi chiedo consiglio?</l>
+                     <l met="11p">Che farò, giusto ciel? mille funesti</l>
+                     <l met="7p">pensieri ho nella mente,</l>
+                     <l met="11p">mille affanni ho nel cor. Se ad altri cedo</l>
+                     <l met="7p">la cara sposa, io sento</l>
+                     <l met="11p">che viver non potrei; se al suo furore</l>
+                     <l met="7p">offro la man, io stesso</l>
+                     <l met="11p">per lei divengo reo. Dovere, amore</l>
+                     <l met="7p">e quali sforzi estremi</l>
+                     <l met="11p">esigete da me! tutti in tumulto</l>
+                     <l met="7t">sento gli affetti miei.</l>
+                     <l met="11t">Che risolvo? che fo? consiglio, oh dei!</l>
+                  </sp>
+               </div3>
+               <div3 type="ensemble">
+                  <sp who="#cinna">
+                     
+                     <l met="8p"><said aloud="true" xml:id="aside-v422" next="#aside-v422-2">Ah, si ceda: onor mi arresta!</said></l>
+                     <l met="8p"><said aloud="true" xml:id="aside-v422-2" prev="#aside-v422" next="#aside-v422-3">Si resista: oh Dio, non posso!</said></l>
+                     <l met="8p"><said aloud="true" xml:id="aside-v422-3" prev="#aside-v422-2" next="#aside-v422-4">L’alma incerta, il cor commosso</said></l>
+                     <l met="8t"><said aloud="true" xml:id="aside-v422-4" prev="#aside-v422-3">che risolvere non sa.</said></l>
+                     
+                     
+                  </sp>
+                  <sp who="#coro_di_soldati">
+                     <speaker>Coro</speaker>
+                     
+                     <l met="8p"><said aloud="false" xml:id="aside-v426" next="#aside-v426-2">Ei vacilla, si confonde,</said></l>
+                     <l met="8t"><said aloud="false" xml:id="aside-v426-2" prev="#aside-v426">e risolvere non sa.</said></l>
+                     
+                     
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     
+                     <l met="8p"><said aloud="true" xml:id="aside-v428" next="#aside-v428-2">Ma qual flebile lamento!</said></l>
+                     <l met="8p"><said aloud="true" xml:id="aside-v428-2" prev="#aside-v428" next="#aside-v428-3">Ella piange, e mesta geme:</said></l>
+                     <l met="8p"><said aloud="true" xml:id="aside-v428-3" prev="#aside-v428-2" next="#aside-v428-4">ah, le affretto l’ore estreme</said></l>
+                     <l met="8t"><said aloud="true" xml:id="aside-v428-4" prev="#aside-v428-3">se non cedo al suo dolor.</said></l>
+                     
+                     
+                  </sp>
+                  <sp who="#coro_di_soldati">
+                     <speaker>Coro</speaker>
+                     
+                     <l met="8p"><said aloud="false" xml:id="aside-v432" next="#aside-v432-2">Ah, si accresce e si diffonde</said></l>
+                     <l met="8t"><said aloud="false" xml:id="aside-v432-2" prev="#aside-v432">la sua pena in ogni cor!</said></l>
+                     
+                     
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     
+                     <l met="8p"><said aloud="true" xml:id="aside-v434" next="#aside-v434-2">Ah, qual barbaro contrasto!</said></l>
+                     <l met="8p"><said aloud="true" xml:id="aside-v434-2" prev="#aside-v434" next="#aside-v434-3">quali smanie in cor mi sento!</said></l>
+                     <l met="8p"><said aloud="true" xml:id="aside-v434-3" prev="#aside-v434-2" next="#aside-v434-4">La mia pena, il mio tormento</said></l>
+                     <l met="8t"><said aloud="true" xml:id="aside-v434-4" prev="#aside-v434-3">quando mai cessar potrà?</said></l>
+                     
+                     
+                  </sp>
+                  <sp who="#coro_di_soldati">
+                     <speaker>Coro</speaker>
+                     
+                     <l met="8p"><said aloud="false" xml:id="aside-v438" next="#aside-v438-2">Quella pena, quel tormento</said></l>
+                     <l met="8t"><said aloud="false" xml:id="aside-v438-2" prev="#aside-v438">a noi desta in sen pietà.</said></l>
+                     
+                     
+                  </sp>
+                  <stage who="#cinna" type="exit">Parte.</stage>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena settima</head>
+              <stage type="mixed"><persName ref="#murena">Murena</persName>, <persName
+                     ref="#coro_di_soldati">suddetti</persName> e <persName ref="#servilia"
+                     >Servilia</persName>.</stage>
+               <div3 type="recitativo">
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7t">Ebben, Murena, sai</l>
+                     <l met="7p">cosa Cinna risolse?</l>
+                  </sp>
+                  <sp who="#murena">
+                     <speaker>Murena</speaker>
+                     <l met="7p">Inquieto, dubbioso</l>
+                     <l met="11p">di qua partì, ne’ intendo a qual partito</l>
+                     <l part="I">alfin s’appiglierà!</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Nel gran cimento</l>
+                     <l met="11p">il vostro ardir, la vostra fé mi basta.</l>
+                     <l met="7p">Sol per la cara figlia</l>
+                     <l met="11p">ansiosa or son io: come salvarla</l>
+                     <l part="I">nel periglio del padre?</l>
+                  </sp>
+                  <sp who="#murena">
+                     <speaker>Murena</speaker>
+                     <l met="11p" part="F">Un fido asilo</l>
+                     <l part="I">fia per lei questo tempio.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Io vado: alcuna</l>
+                     <l met="7p">delle mie fide ancelle</l>
+                     <l met="11p">di qui condurla avrà la cura. In essa</l>
+                     <l met="7t">odiare io dovrei</l>
+                     <l met="11p">il sangue d’un tiranno; ma son madre,</l>
+                     <l met="7t">e in mezzo al mio furore</l>
+                     <l met="11p">per la salvezza sua mi parla il core.</l>
+                  </sp>
+                  <stage who="#servilia" type="exit">Parte.</stage>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena ottava</head>
+               <stage type="mixed"><persName ref="#murena">Murena</persName> e <persName
+                     ref="#coro_di_seguaci">seguaci</persName>.</stage>
+               <div3 type="recitativo">
+                  <sp who="#murena">
+                     <speaker>Murena</speaker>
+                     <l met="7p">A celarsi nel tempio,</l>
+                     <l met="11p">amici, andiam, finché alla trama arrida</l>
+                     <l met="11p">della notte il favor. Pensate, intanto,</l>
+                     <l met="11p">se l’amor della patria il sen v’accende,</l>
+                     <l met="11p">che il suo destin dal vostro ardir dipende.</l>
+                  </sp>
+               </div3>
+               <div3 type="coro" rhyme="ABCBD">
+                  <sp who="#murena #coro_di_seguaci">
+                     <speaker>Murena, Coro</speaker>
+                     <l met="7p">Roma le sue cat<rhyme label="A">ene</rhyme></l>
+                     <l met="7p">a noi piangendo add<rhyme label="B">ita</rhyme>,</l>
+                     <l met="7p">per secondar sua sp<rhyme label="C">eme</rhyme></l>
+                     <l met="7p">il perdere la v<rhyme label="B">ita</rhyme></l>
+                     <l met="7t">gloria per noi sar<rhyme label="D">à</rhyme>.</l>
+                  </sp>
+                  <stage type="mixed">Entrano <persName ref="#murena #coro_di_seguaci"
+                        >tutti</persName> nel tempio e chiudono la porta.</stage>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena nona</head>
+               <stage type="mixed"><persName ref="#servilia">Servilia</persName> sola esce col
+                  foglio del ripudio in mano, poi le <persName ref="#coro_delle_ancelle"
+                     >ancelle</persName> colla piccola <persName ref="#giulia"
+                  >figlia</persName>.</stage>
+               <div3 type="recitativo">
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p">Oh scorno! oh disonor! del mio ripudio</l>
+                     <l met="11p">ecco segnata la sentenza. Adesso</l>
+                     <l met="11p">più sposa non son io… che fai? che pensi,</l>
+                     <l met="11t">infelice Servilia? ah, dove mai</l>
+                     <l met="7p">con questa macchia in fronte</l>
+                     <l met="11p">comparir più potrai? orsù, t’affretta</l>
+                     <l met="7p">nel sangue del tiranno</l>
+                     <l met="11p">l’oltraggio a vendicar. A un altro in braccio</l>
+                     <l met="11p">si vada pur; ma pronube a quel nodo,</l>
+                     <l met="11p">onde quest’alma il suo trionfo spera,</l>
+                     <l met="11p">sia la face d’Aletto e di Megera.</l>
+                  </sp>
+                  <stage type="mixed"> Nell’atto che <persName ref="#servilia">Servilia</persName>
+                     s’incammina per partire, s’incontra nelle sue <persName
+                        ref="#coro_delle_ancelle">ancelle</persName>, le quali appena venute in
+                     scena, cantano il seguente coro.</stage>
+               </div3>
+               <div3 type="coro" rhyme="ABCB">
+                  <sp who="#coro_delle_ancelle">
+                     <speaker>Coro</speaker>
+                     <l met="7s">Qual mai t’accende, o m<rhyme label="A">isera</rhyme>,</l>
+                     <l met="7t">inutile fur<rhyme label="B">or</rhyme>?</l>
+                     <l met="7s">In quest’oggetto am<rhyme label="C">abile</rhyme></l>
+                     <l met="7t">consola il tuo dol<rhyme label="B">or</rhyme>.</l>
+                  </sp>
+                  <stage type="mixed">Nell’atto che cantano i due ultimi versi, accennano <persName
+                        ref="#coro_delle_ancelle">tutte</persName>
+                     <persName ref="#giulia">Giulia</persName>, che presentano a <persName
+                        ref="#servilia">Servilia</persName>, la quale in aria di sorpresa e
+                     d’agitazione si abbandona sopra a un sedile di pietra, e dopo averla alquanto
+                     osservata ripiglia il seguente recitativo.</stage>
+               </div3>
+               <div3 type="recitativo">
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p">Numi! che veggo mai? Figlia innocente</l>
+                     <l met="7p">d’una madre dolente,</l>
+                     <l met="7p">vieni agli amplessi. Il cielo</l>
+                     <l met="7p">tanto a te sia cortese</l>
+                     <l met="11p">quanto a me fu crudel. Figlia… che dico?</l>
+                     <l met="7p">del tiran… del nemico</l>
+                     <l met="11p">non è figlia costei? Togliete, <said aloud="true">oh Dio!</said></l>
+                     <l met="11p">quell’oggetto funesto agli occhi miei…</l>
+                     <l met="7p">Ma no… lasciate… in lei</l>
+                     <l met="11p">vo sfogar l’ire mie. Tutto si versi</l>
+                     <l met="11p">il sangue d’Ottavian. Inorridisca</l>
+                     <l met="11p">e Roma e il mondo, e in questa età sì rea</l>
+                     <l met="11p">in me ritorni a rammentar Medea.</l>
+                  </sp>
+                 <stage type="mixed">Cava uno stile, dopo aver presa per un braccio la <persName
+                        ref="#giulia">figlia</persName>, e nell’atto di ferirla comincia la seguente
+                     aria.</stage>
+               </div3>
+               <div3 type="aria" rhyme="ABAB">
+                  <sp who="#servilia">
+                     <l met="8p">Mori… oh Dio!… mia figlia è qu<rhyme label="A">esta</rhyme>!</l>
+                     <l met="8t">Con la man mi trema il c<rhyme label="B">or</rhyme>,</l>
+                     <l met="8p">e una voce che m’arr<rhyme label="A">esta</rhyme></l>
+                     <l met="8t">grida a me: «Sei madre anc<rhyme label="B">or</rhyme>!».</l>
+                  </sp>
+               </div3>
+               <div3 type="coro" rhyme="AB">
+                  <stage>Le <name ref="#coro_delle_ancelle">ancelle</name> prendon in mezzo
+                        <persName ref="#servilia">Servilia</persName>, lasciandola però scoperta
+                     alla vista dei spettatori, e nel togliere a lei di mano la <persName
+                        ref="#giulia">figlia</persName> replicano il coro.</stage>
+                  <sp who="#coro_delle_ancelle">
+                     <speaker>Coro</speaker>
+                     <l met="7s">Qual mai t’accende, o m<rhyme label="A">isera</rhyme>,</l>
+                     <l met="7t">inutile fur<rhyme label="B">or</rhyme>?</l>
+                  </sp>
+               </div3>
+               <div3 type="aria" rhyme="ABAC">
+                  <sp who="#servilia">
+                     <speaker>SERVILIA</speaker>
+                     <l met="8p">Cara parte del cor m<rhyme label="A">io</rhyme>,</l>
+                     <l met="8p">vieni, o figlia… a questo s<rhyme label="B">eno</rhyme>!</l>
+                     <l met="8p">Per te sol, io sento, oh D<rhyme label="A">io</rhyme>!</l>
+                     <l met="8t">venir meno il mio val<rhyme label="C">or</rhyme>.</l>
+                  </sp>
+               </div3>
+               <div3 type="coro" rhyme="AB">
+                  <stage type="mixed">Le <persName ref="#coro_delle_ancelle">ancelle</persName>
+                     indicando ad <persName ref="#servilia">essa</persName> di nuovo la <persName
+                        ref="#giulia">figlia</persName> ricantano il coro.</stage>
+                  <sp who="#coro_delle_ancelle">
+                     <speaker>Coro</speaker>
+                     <l met="7s">In quest’oggetto am<rhyme label="A">abile</rhyme></l>
+                     <l met="7t">consola il tuo dol<rhyme label="B">or</rhyme>.</l>
+                  </sp>
+               </div3>
+               <div3 type="aria" rhyme="ABABC">
+                  <stage type="mixed"><persName ref="#servilia">Servilia</persName>, dopo un po’ di
+                     sospensione, s’alza in piedi ed in aria del più eccessivo furore segue a
+                     dire.</stage>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="8p">Ah, vendetta, o stelle ingr<rhyme label="A">ate</rhyme>!</l>
+                     <l met="8p">Del crudel che m’ha oltraggi<rhyme label="B">ata</rhyme>,</l>
+                     <l met="8p">care amiche, oh Dio! cel<rhyme label="A">ate</rhyme></l>
+                     <l met="8p">a una madre disper<rhyme label="B">ata</rhyme></l>
+                     <l met="8t">quell’oggetto di terr<rhyme label="C">or</rhyme>.</l>
+                  </sp>
+                  <stage who="#servilia" type="exit">Parte seguita dalle sue <persName
+                        ref="#coro_delle_ancelle">ancelle</persName>.</stage>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena decima</head>
+              <stage type="mixed"><persName ref="#murena">Murena</persName> e <persName
+                     ref="#coro_di_seguaci">seguaci</persName> escono dal <placeName ref="tem">tempio</placeName>.</stage>
+               <div3 type="recitativo">
+                  <sp who="#murena">
+                     <speaker>Murena</speaker>
+                     <l met="7p">Già s’avvicina, amici,</l>
+                     <l met="11p">l’ora opportuna; il valoroso Cinna</l>
+                     <l met="11p">fia compagno all’impresa, e già Servilia</l>
+                     <l met="11p">feci avvertir. Abbandonate al sonno</l>
+                     <l met="11t">fien tra poco le schiere; andiam, e in noi</l>
+                     <l met="7p">fra gli estremi perigli</l>
+                     <l met="11p">Roma ritrovi i cittadini e i figli.</l>
+                  </sp>
+                  <stage who="#murena #coro_di_seguaci" type="exit">Partono.</stage>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena undicesima</head>
+               <stage type="mixed">Parte del <placeName ref="cam">campo</placeName>. In mezzo al
+                  padiglione d’<persName ref="#ottaviano">Ottaviano</persName>, di cui si vede
+                  l’ingresso in prospetto. A destra varie tende sparse per la pianura, che si
+                  stendono anche in lontananza. A sinistra oscuro bosco. Notte oscura, illuminata
+                  solo da alcune faci moribonde. Si veggono d’intorno al padiglione d’<persName
+                     ref="#ottaviano">Ottaviano</persName> i <persName ref="#soldati"
+                     >soldati</persName> e le <persName ref="#guardie">guardie</persName> stese a
+                  dormire sulla terra, e così in altre parti del <placeName ref="cam"
+                     >campo</placeName> le schiere che dormono in diversa positura. <persName
+                     ref="#ottaviano">Ottaviano</persName> solo senz’armi, che esce dal suo
+                  padiglione.</stage>
+               <div3 type="recitativo">
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="11p">Che silenzio, che orror! In dolce sonno</l>
+                     <l met="11p">già riposan le schiere, e molli piume</l>
+                     <l met="11p">alle stanche lor membra è il nudo suolo…</l>
+                     <l met="7p">Io sol, <said aloud="true">misero</said>, io solo</l>
+                     <l met="11p">co’ miei sospetti in sen, cinto da mille</l>
+                     <l met="11p">immagini d’orror, sempre agitato</l>
+                     <l met="7p">da un rimorso affannoso,</l>
+                     <l met="11p">nella pace comun non ho riposo.</l>
+                  </sp>
+               </div3>
+               <div3 type="aria" rhyme="ABAC">
+                  <sp who="#ottaviano">
+                     <l met="8p">Mille affanni ho intorno all’<rhyme label="A">alma</rhyme>.</l>
+                     <l met="8p">Cerco ognor l’antica p<rhyme label="B">ace</rhyme>,</l>
+                     <l met="8p">ma un istante, oh Dio, di c<rhyme label="A">alma</rhyme></l>
+                     <l met="8t">io non posso ritrov<rhyme label="C">ar</rhyme>.</l>
+                  </sp>
+               </div3>
+               <div3 type="recitativo">
+                  <stage type="novelistic">S’estinguono ad un tratto le faci, e si sente in lontano
+                     uno strepito d’armi da varie parti del campo.</stage>
+                  <sp who="#ottaviano">
+                     <l met="7p">Ma quale, ahimè! si desta</l>
+                     <l met="11p">strepito d’armi intorno? olà… soldati,</l>
+                     <l met="7p">svegliatevi… le faci</l>
+                     <l met="11p">ad accender correte. Io del periglio</l>
+                     <l met="11p">a esplorar la cagion, che non comprendo,</l>
+                     <l met="11p">mi celo in questo bosco, e qui v’attendo.</l>
+                  </sp>
+                   <stage type="mixed">I <persName ref="#soldati">soldati</persName>, dopo essersi
+                     svegliati al cenno d’<persName ref="#ottaviano">Ottaviano</persName>, partono
+                     subito: due di essi portano ad <persName ref="#ottaviano">Ottaviano</persName>
+                     l’elmo, la spada e lo scudo. Cresce intanto lo strepito, e si veggono per il
+                     <placeName ref="cam">campo</placeName> vari movimenti. <persName ref="#ottaviano">Ottaviano</persName>
+                     parte.</stage>
+               </div3>
+            </div2>
+            <div2 type="scene">
+               <head>Scena dodicesima</head>
+               <stage type="mixed">Cessato lo strepito, esce <persName ref="#servilia"
+                     >Servilia</persName> agitata, indi <persName ref="#cinna">Cinna</persName>, poi
+                     <persName ref="#ottaviano">Ottaviano</persName> e <persName
+                     ref="#coro_di_soldati">soldati</persName> con faci accese.</stage>
+               <div3 type="recitativo">
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p">Se non m’inganna Agrippa</l>
+                     <l met="11p">ei precede i miei passi… Cinna… ah, dove</l>
+                     <l met="11p">rinvenirlo poss’io? La tenda è quella</l>
+                     <l met="11p">in cui dorme il tiranno. Ardir. Si vada</l>
+                     <l met="11p">il perfido a punir. Sì, questa impresa</l>
+                     <l met="11p">è degna del mio cor. L’ingresso è aperto,</l>
+                     <l met="11p">senza custodi è il loco. <stage>Cava lo stile.</stage></l>
+                     <l met="11p">Bruto, Pompeo, la vostra aita invoco.</l>
+                  </sp>
+                  <stage type="mixed">Entra nel padiglione. Rinnovatosi lo strepito, si vedono
+                     alcuni <persName ref="#soldati">soldati</persName> a passar frettolosi per la
+                     scena, poi <persName ref="#cinna">Cinna</persName> spaventato, con ferro in
+                     mano.</stage>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="7p">Ah, dove posso, oh dei,</l>
+                     <l met="11p">occultarmi e fuggir? in ogni parte</l>
+                     <l met="11p">si corre all’armi, i miei seguaci or sono</l>
+                     <l met="11p">di Cesare in poter. In quella tenda</l>
+                     <l met="7p">opportuno è il celarsi.</l>
+                  </sp>
+                  <stage type="mixed">Nell’atto che s’incammina per entrar nel padiglione
+                        d’<persName ref="#ottaviano">Ottaviano</persName>, comparisce sull’ingresso
+                     del medesimo <persName ref="#servilia">Servilia</persName>, che non vede
+                        <persName ref="#cinna">Cinna</persName>.</stage>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p">Il tiranno non v’è. <stage type="delivery">Scorgendo
+                              <persName ref="#cinna">Cinna</persName>.</stage> Eccolo, mori.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="7p">Oh ciel! ferma, che fai? <stage type="delivery">Nell’atto
+                           di veder <persName ref="#servilia">Servilia</persName> in atto di
+                           ferirlo.</stage></l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p">Ohimé! qual voce!… ah, Cinna,</l>
+                     <l met="11p" part="I">del tiranno che fu?</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="11p" part="F">L’ignoro. Il cielo</l>
+                     <l met="11p">combatte a suo favor: nota è la trama,</l>
+                     <l met="7p">è scoperto il disegno,</l>
+                     <l part="I">più speranza non v’è.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="11p" part="F">Fremo di sdegno.</l>
+                  </sp>
+               </div3>
+               <div3 type="ensemble" subtype="trio">
+                  <sp who="#servilia">
+                     <l met="8p">Ah, si fugga… oh ciel! ma dove?</l>
+                     <l met="8p">Qual speranza? qual consiglio?</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="8p">Ah, che sol pel tuo periglio</l>
+                     <l met="8t">io mi sento palpitar!</l>
+                  </sp>
+                  <spGrp type="a_2" who="#cinna #servilia">
+                     <sp who="#cinna #servilia">
+                        <l met="8p">Qual ristoro in tante pene</l>
+                        <l met="8t">può quest’alma ritrovar?</l>
+                     </sp>
+                  </spGrp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="7p">Perfidi, alfin scopersi</l>
+                     <l met="7p">il tradimento orrendo,</l>
+                     <l met="7p">ma sopra voi tremendo</l>
+                     <l met="7t">il mio furor cadrà!</l>
+                  </sp>
+                  <spGrp type="a_2" who="#cinna #servilia">
+                     <sp who="#cinna #servilia">
+                        <speaker>Cinna, Servilia</speaker>
+                        <l met="7p">Che fiero colpo è questo!</l>
+                        <l met="7p">Di gel, di sasso io resto!</l>
+                     </sp>
+                  </spGrp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l met="7p">Frena, signor, lo sdegno!</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="7p">Va’, traditore indegno!</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p">Il fallo è solo mio.</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="7p">Ambi punir vogl’io.</l>
+                  </sp>
+                  <sp who="#cinna">
+                     <speaker>Cinna</speaker>
+                     <l part="I">Ascolta.</l>
+                  </sp>
+                  <sp who="#servilia">
+                     <speaker>Servilia</speaker>
+                     <l met="7p" part="F">Oh Dio! ti placa!</l>
+                  </sp>
+                  <sp who="#ottaviano">
+                     <speaker>Ottaviano</speaker>
+                     <l met="7t">Non v’è per voi pietà.</l>
+                  </sp>
+                  <spGrp type="a_3" who="#cinna #servilia #ottaviano">
+                     <sp who="#cinna #servilia">
+                        <speaker>Cinna, Servilia</speaker>
+                        <l met="8p">Deh, ti mova il nostro affanno,</l>
+                        <l met="8t">non negar a noi pietà.</l>
+                     </sp>
+                     <sp who="#ottaviano">
+                        <speaker>Ottaviano</speaker>
+                        <l met="8p">Scellerati, traditori,</l>
+                        <l met="8t">no, per voi non v’è pietà!</l>
+                     </sp>
+                     <sp who="#cinna #servilia">
+                        <speaker>Cinna, Servilia</speaker>
+                        <l met="6p">Signor, a’ tuoi piedi</l>
+                        <l met="6p">pentiti noi siamo.</l>
+                        <l met="6p">Al pianto, deh, cedi,</l>
+                        <l met="6t">perdona all’error.</l>
+                     </sp>
+                     <stage>Qui s’inginocchiano.</stage>
+                     <sp who="#ottaviano">
+                        <speaker>Ottaviano</speaker>
+                        
+                        <l met="6p"><said aloud="false" xml:id="aside-v582" next="#aside-v582-2">Incognito affetto</said></l>
+                        <l met="6p"><said aloud="false" xml:id="aside-v582-2" prev="#aside-v582" next="#aside-v582-3">che sento nel petto</said></l>
+                        <l met="6t"><said aloud="false" xml:id="aside-v582-3" prev="#aside-v582-2" next="#aside-v582-4">disarma il furor.</said></l>
+                        
+                        
+                        <l met="7p"><said aloud="false" xml:id="aside-v582-4" prev="#aside-v582-3" next="#aside-v582-5">Sorgete: io vi perdono.</said></l>
+                        <l met="7p"><said aloud="false" xml:id="aside-v582-5" prev="#aside-v582-4" next="#aside-v582-6">Da me virtù apprendete.</said></l>
+                        <l met="7p"><said aloud="false" xml:id="aside-v582-6" prev="#aside-v582-5" next="#aside-v582-7">Felici insiem vivrete,</said></l>
+                        <l met="7t"><said aloud="false" xml:id="aside-v582-7" prev="#aside-v582-6">e Livia mia sarà.</said></l>
+                     </sp>
+                     <sp who="#cinna #servilia">
+                        <speaker>Cinna, Servilia</speaker>
+                        <l met="7p">Oh, quanto il nostro core</l>
+                        <l met="7t">è grato a tal bontà!</l>
+                     </sp>
+                  </spGrp>
+               </div3>
+               <div3 type="coro" subtype="finale" rhyme="AABCDB">
+                  <sp who="#cinna #servilia #ottaviano #coro_di_soldati">
+                     <speaker>Tutti</speaker>
+                     <l met="8p">Ah, cessato è ogni torm<rhyme label="A">ento!</rhyme></l>
+                     <l met="8p">Viva sempre tal cont<rhyme label="A">ento</rhyme>!</l>
+                     <l met="8t">Tutto è pace e tutto am<rhyme label="B">or</rhyme>.</l>
+                     <l met="8p">Gran conforto tra le p<rhyme label="C">ene</rhyme></l>
+                     <l met="8p">è la spene lusingh<rhyme label="D">iera</rhyme>,</l>
+                     <l met="8t">che compensa ogni dol<rhyme label="B">or</rhyme>.</l>
+                  </sp>
+               </div3>
+            </div2>
+         </div1>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><!--
+  libretto.odd — Project ODD for Da Ponte Libretti.
+
+  Documents the TEI customization used by the project. Each constraint mirrors
+  one of the project conventions ratified by the editorial team (see
+  docs/editorial_decisions_needed.md, all items resolved 2026-05-02).
+
+  The Schematron rules are duplicated as a standalone file at schemas/libretto.sch
+  for direct execution by scripts/validate_tei.py via lxml.isoschematron.
+  When updating constraints, update BOTH files (ODD = canonical documentation;
+  .sch = executable). The validator will regenerate .sch from this ODD in a
+  future Phase 0.5 enhancement (Roma toolchain integration).
+
+  Build a runnable schema set:
+    docker run -v $PWD/schemas:/data teic/oxgarage \
+      ./Stylesheets/bin/teitorng /data/libretto.odd /data/libretto.rng
+    docker run -v $PWD/schemas:/data teic/oxgarage \
+      ./Stylesheets/bin/teitosch /data/libretto.odd /data/libretto.sch
+--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Da Ponte Libretti — Project TEI Customization (ODD)</title>
+        <author>Da Ponte Libretti project — editorial team</author>
+        <respStmt>
+          <resp>Schema definition and Schematron rules</resp>
+          <name>Mariia Levchenko</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Internal project schema. CC BY 4.0 — see LICENSE-content.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Derived from TEI P5 by selective inclusion. Source:
+          tei-c.org/release/xml/tei/odd/p5subset.xml</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change when="2026-05-02">
+        Productionised after resolution of editorial decisions: Italian taxonomies,
+        _Np metDecl convention, UPPERCASE sex, &lt;head&gt; required for act/scene,
+        snake_case personGrp IDs, Italian &lt;resp&gt; content, "Da Ponte" as
+        single surname, line xml:ids only when referenced.
+      </change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+
+      <div>
+        <head>1. Project conventions (resolved 2026-05-02)</head>
+        <list>
+          <item><hi rend="bold">Language:</hi> Italian for editorial content; ISO 639-3 codes (`ita`, not `it`).</item>
+          <item><hi rend="bold">Surname "Da Ponte":</hi> single &lt;surname&gt;Da Ponte&lt;/surname&gt;.</item>
+          <item><hi rend="bold">Line xml:id policy:</hi> generate IDs in the pipeline; encoders only write &lt;l xml:id&gt; when the line is referenced (by @synch, by &lt;anchor&gt;/&lt;span&gt; for asides, by alignment standoff).</item>
+          <item><hi rend="bold">&lt;personGrp&gt; identity:</hi> per-file namespace; descriptive snake_case xml:ids (e.g., <code>coro_di_zingani</code>, never <code>zin</code>).</item>
+          <item><hi rend="bold">&lt;stage type="modifier"&gt;:</hi> deferred — accept as-is for now; may be reclassified later.</item>
+          <item><hi rend="bold">&lt;div3 type&gt; taxonomy:</hi> Italian (recitativo, aria, arietta, cavatina, coro, duetto, terzetto, quartetto, quintetto, sestetto, ensemble, finale).</item>
+          <item><hi rend="bold">&lt;metDecl&gt; convention:</hi> <code>_Np</code> (`_5p`, `_7p`, `_11p` for piano; `_5t`, `_5s` for tronco/sdrucciolo).</item>
+          <item><hi rend="bold">&lt;sex&gt;:</hi> MALE / FEMALE / UNKNOWN (UPPERCASE).</item>
+          <item><hi rend="bold">Act/scene titles:</hi> always &lt;head&gt;, never &lt;p&gt;.</item>
+          <item><hi rend="bold">&lt;langUsage&gt;:</hi> mandatory in &lt;profileDesc&gt;.</item>
+        </list>
+      </div>
+
+      <div>
+        <head>2. Module selection</head>
+        <p>Only the modules below are in scope.</p>
+        <schemaSpec ident="libretto" start="TEI" source="https://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">
+
+          <moduleRef key="tei"/>
+          <moduleRef key="header"/>
+          <moduleRef key="core"/>
+          <moduleRef key="textstructure"/>
+          <moduleRef key="drama"/>
+          <moduleRef key="figures"/>
+          <moduleRef key="textcrit"/>
+          <moduleRef key="verse"/>
+          <moduleRef key="msdescription"/>
+          <moduleRef key="linking"/>
+          <moduleRef key="analysis"/>
+          <moduleRef key="namesdates"/>
+          <moduleRef key="transcr"/>
+
+          <!-- Excluded: spoken, dictionaries, iso-fs, nets -->
+
+          <!-- ═══════════════════════════════════════════════════════════
+               Element customizations
+               ═══════════════════════════════════════════════════════════ -->
+
+          <!-- 2.1 — Required teiHeader skeleton -->
+          <elementSpec ident="teiHeader" mode="change">
+            <constraintSpec ident="must-have-titleStmt-author" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:teiHeader/tei:fileDesc/tei:titleStmt">
+                  <sch:assert test="tei:author or tei:respStmt" role="error" id="HEADER_AUTHOR">
+                    Ogni edizione deve dichiarare un &lt;author&gt; o &lt;respStmt&gt;
+                    in &lt;titleStmt&gt;.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+
+          <!-- 2.2 — langUsage required, ISO 639-3 -->
+          <elementSpec ident="langUsage" mode="change">
+            <constraintSpec ident="lang-required" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:profileDesc">
+                  <sch:assert test="tei:langUsage/tei:language[@ident]" role="error" id="LANG_USAGE_REQUIRED">
+                    &lt;profileDesc&gt; deve contenere &lt;langUsage&gt; con
+                    almeno una &lt;language @ident&gt;.
+                  </sch:assert>
+                </sch:rule>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:language">
+                  <sch:assert test="string-length(@ident) = 3" role="error" id="LANG_ISO_639_3">
+                    @ident="<sch:value-of select="@ident"/>" deve essere un codice
+                    ISO 639-3 a 3 lettere (es. "ita", non "it").
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+
+          <!-- 2.3 — Witness sigla -->
+          <elementSpec ident="witness" mode="change">
+            <constraintSpec ident="witness-has-id" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:witness">
+                  <sch:assert test="@xml:id" role="error" id="WITNESS_NO_ID">
+                    Ogni &lt;witness&gt; deve avere @xml:id (siglum).
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+
+          <!-- 2.4 — Persons -->
+          <elementSpec ident="person" mode="change">
+            <constraintSpec ident="person-has-id" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:person">
+                  <sch:assert test="@xml:id" role="error" id="PERSON_NO_ID">
+                    Ogni &lt;person&gt; deve avere @xml:id.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="person-sex-uppercase" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:person[@sex] | tei:personGrp[@sex]">
+                  <sch:assert test="@sex = ('MALE', 'FEMALE', 'UNKNOWN')" role="error" id="SEX_UPPERCASE">
+                    @sex="<sch:value-of select="@sex"/>" — deve essere MALE / FEMALE / UNKNOWN (maiuscolo).
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+
+          <!-- 2.5 — personGrp: descriptive snake_case ID -->
+          <elementSpec ident="personGrp" mode="change">
+            <desc>Used for choirs, crowds, ensembles. xml:id MUST be a descriptive
+              snake_case identifier (e.g., <code>coro_di_zingani</code>, not abbreviations
+              like <code>zin</code>). Per-file namespace: cross-text identity is not
+              expressed via shared IDs.</desc>
+            <constraintSpec ident="persongrp-id-pattern" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:personGrp">
+                  <sch:assert test="@xml:id" role="error" id="PERSONGRP_NO_ID">
+                    Ogni &lt;personGrp&gt; deve avere @xml:id.
+                  </sch:assert>
+                  <sch:report test="@xml:id and string-length(@xml:id) &lt; 4" role="warning" id="PERSONGRP_ID_TOO_SHORT">
+                    xml:id="<sch:value-of select="@xml:id"/>" sembra un'abbreviazione.
+                    La convenzione del progetto è snake_case descrittivo
+                    (es. coro_di_zingani anziché zin).
+                  </sch:report>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+
+          <!-- 2.6 — Cross-references resolve -->
+          <constraintSpec ident="ref-targets-exist" scheme="schematron">
+            <constraint>
+              <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:persName[@ref] | tei:placeName[@ref] | tei:name[@ref]">
+                <sch:assert test="starts-with(@ref, '#')" role="error" id="REF_NO_HASH">
+                  @ref="<sch:value-of select="@ref"/>" deve iniziare con '#'.
+                </sch:assert>
+                <sch:let name="target" value="substring-after(@ref, '#')"/>
+                <sch:assert test="//tei:*[@xml:id = $target]" role="error" id="REF_BROKEN">
+                  @ref="<sch:value-of select="@ref"/>" non risolve a nessun xml:id nel documento.
+                </sch:assert>
+              </sch:rule>
+              <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:sp[@who]">
+                <sch:let name="who-tokens" value="tokenize(@who, '\s+')[normalize-space() != '']"/>
+                <sch:report test="some $w in $who-tokens satisfies not(starts-with($w, '#'))" role="error" id="WHO_NO_HASH">
+                  @who="<sch:value-of select="@who"/>" — almeno un riferimento non inizia con '#'.
+                </sch:report>
+                <sch:assert test="every $w in $who-tokens                                   satisfies starts-with($w, '#') and                                   //tei:*[@xml:id = substring-after($w, '#')]" role="error" id="WHO_BROKEN">
+                  @who="<sch:value-of select="@who"/>" — almeno un riferimento non risolve.
+                </sch:assert>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+
+          <!-- 2.7 — div3 taxonomy (Italian @type; English @subtype).
+
+               @type is the broad performance category (only four values in
+               use across the corpus); the specific ensemble form (duet,
+               trio, quartet…) lives in @subtype. This split lets the
+               renderer treat all "ensemble" speeches uniformly while still
+               labelling the section by the count of voices.
+
+               Productionised vocabulary (evidence: docs/odd_usage.md,
+               re-run scripts/extract_odd_usage.py to refresh).
+          -->
+          <elementSpec ident="div3" mode="change">
+            <desc>Speech-block category. @type is one of the four broad
+              categories actually used by the editorial team; @subtype names
+              the specific ensemble form when @type is ensemble or aria.</desc>
+            <constraintSpec ident="div3-type-italian" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:div3">
+                  <sch:assert test="@type" role="error" id="DIV3_NO_TYPE">
+                    &lt;div3&gt; deve avere @type.
+                  </sch:assert>
+                  <sch:assert test="@type = ('recitativo', 'aria', 'coro', 'ensemble')" role="error" id="DIV3_TYPE_INVALID">
+                    &lt;div3 type="<sch:value-of select="@type"/>"&gt; — valore non nella
+                    tassonomia del progetto. Valori ammessi: recitativo, aria, coro, ensemble.
+                    (Forme specifiche come duetto/terzetto/quartetto vanno in @subtype:
+                    duet, trio, quartet, quintet, sextet, finale.)
+                  </sch:assert>
+                  <sch:assert test="not(@subtype) or @subtype = ('finale', 'duet', 'trio',                                                                   'quartet', 'quintet', 'sextet')" role="error" id="DIV3_SUBTYPE_INVALID">
+                    &lt;div3 subtype="<sch:value-of select="@subtype"/>"&gt; — valore non
+                    nella tassonomia. Valori ammessi: finale, duet, trio, quartet,
+                    quintet, sextet.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          <attList>
+              <attDef ident="type" mode="change" usage="req">
+                <valList type="closed" mode="add">
+                  <valItem ident="recitativo"/>
+                  <valItem ident="aria"/>
+                  <valItem ident="coro"/>
+                  <valItem ident="ensemble"/>
+                </valList>
+              </attDef>
+              <attDef ident="subtype" mode="change" usage="opt">
+                <desc>Specific ensemble form. English convention since the
+                  project's earliest editions; not Italianised because the
+                  vocabulary is small and stable.</desc>
+                <valList type="closed" mode="add">
+                  <valItem ident="finale"/>
+                  <valItem ident="duet"/>
+                  <valItem ident="trio"/>
+                  <valItem ident="quartet"/>
+                  <valItem ident="quintet"/>
+                  <valItem ident="sextet"/>
+                </valList>
+              </attDef>
+            </attList>
+            </elementSpec>
+
+          <!-- 2.8 — Acts: type taxonomy + acts/scenes use <head>, never <p> -->
+          <elementSpec ident="div1" mode="change">
+            <desc>Act-level division. @type is one of:
+              <list>
+                <item><code>act</code> — a numbered act of the drama.</item>
+                <item><code>mutation</code> — a revision-act unit used in the
+                  Anonimo's "Mutazioni" rewrite of Goldoni's Talismano (M79R),
+                  where the reviser groups his interventions as numbered
+                  mutazioni rather than re-acts.</item>
+              </list>
+              Title required in &lt;head&gt;, never in &lt;p&gt;.</desc>
+            <constraintSpec ident="div1-type-required" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:div1">
+                  <sch:assert test="@type = ('act', 'mutation')" role="error" id="DIV1_TYPE_INVALID">
+                    &lt;div1 type="<sch:value-of select="@type"/>"&gt; — valori ammessi:
+                    act, mutation.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="act-uses-head" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:div1[@type=('act','mutation')] | tei:div2[@type='scene']">
+                  <sch:report test="tei:p and not(tei:head)" role="error" id="TITLE_USES_P">
+                    Il titolo di atto/scena deve essere in &lt;head&gt;, non in &lt;p&gt;.
+                  </sch:report>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          <attList>
+              <attDef ident="type" mode="change" usage="req">
+                <valList type="closed" mode="add">
+                  <valItem ident="act"/>
+                  <valItem ident="mutation"/>
+                </valList>
+              </attDef>
+            </attList>
+            </elementSpec>
+
+          <!-- 2.9 — metDecl: _Np convention -->
+          <elementSpec ident="metDecl" mode="change">
+            <desc>Metric pattern declaration. xml:id format: <code>_N(p|t|s)</code>
+              where N is the syllable count and p/t/s is piano/tronco/sdrucciolo.
+              The &lt;p&gt; child must contain the human-readable name.</desc>
+            <constraintSpec ident="metdecl-format" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:metDecl">
+                  <sch:assert test="@xml:id" role="error" id="METDECL_NO_ID">
+                    &lt;metDecl&gt; deve avere @xml:id.
+                  </sch:assert>
+                  <sch:assert test="tei:p[normalize-space()]" role="error" id="METDECL_NO_P">
+                    &lt;metDecl&gt; deve contenere &lt;p&gt; con il nome del metro
+                    (es. "endecasillabo piano").
+                  </sch:assert>
+                  <sch:assert test="matches(@xml:id, '^_\d+[pts]$')" role="error" id="METDECL_BAD_PATTERN">
+                    xml:id="<sch:value-of select="@xml:id"/>" — convenzione attesa:
+                    _N(p|t|s) dove N è il conto sillabico e p/t/s
+                    indica piano/tronco/sdrucciolo (es. _5p, _7t, _11s).
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+
+          <!-- 2.10 — Speeches must have @who or <speaker> -->
+          <elementSpec ident="sp" mode="change">
+            <constraintSpec ident="sp-must-identify-speaker" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:sp">
+                  <sch:assert test="@who or tei:speaker" role="error" id="SP_NO_SPEAKER">
+                    &lt;sp&gt; deve avere @who oppure &lt;speaker&gt;.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+
+          <!-- 2.10a — Stage directions: @type taxonomy
+               The reader applies different rendering per type (e.g. centred
+               for setting/entrance/exit; inline italic for mixed/business).
+               See src/styles/reader.css under .stage-*.
+          -->
+          <elementSpec ident="stage" mode="change">
+            <desc>Stage direction. @type required from the project's vocabulary:
+              <list>
+                <item><code>setting</code> — describes scene setting/space at the start of a scene.</item>
+                <item><code>entrance</code> — character enters the stage.</item>
+                <item><code>exit</code> — character leaves the stage.</item>
+                <item><code>mixed</code> — multi-purpose narrative description with character movement.</item>
+                <item><code>delivery</code> — speaking direction (a parte, sotto voce, alle ancelle…).</item>
+                <item><code>business</code> — physical action by characters on stage (gli dà la borsa, ribacia il foglio…).</item>
+                <item><code>novelistic</code> — narrative aside in the manner of a novel; non-performable description.</item>
+                <item><code>location</code> — where the scene is set, distinct from setting in being a place-name only.</item>
+                <item><code>modifier</code> — character-state qualifier (deferred classification; may be reclassified).</item>
+              </list>
+            </desc>
+            <constraintSpec ident="stage-type-vocab" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:stage">
+                  <sch:assert test="@type = ('setting', 'entrance', 'exit', 'mixed',                                               'delivery', 'business', 'novelistic',                                               'location', 'modifier')" role="error" id="STAGE_TYPE_INVALID">
+                    &lt;stage type="<sch:value-of select="@type"/>"&gt; — valore non
+                    nella tassonomia. Valori ammessi: setting, entrance, exit, mixed,
+                    delivery, business, novelistic, location, modifier.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          <attList>
+              <attDef ident="type" mode="change" usage="req">
+                <valList type="closed" mode="add">
+                  <valItem ident="setting"/>
+                  <valItem ident="entrance"/>
+                  <valItem ident="exit"/>
+                  <valItem ident="mixed"/>
+                  <valItem ident="delivery"/>
+                  <valItem ident="business"/>
+                  <valItem ident="novelistic"/>
+                  <valItem ident="location"/>
+                  <valItem ident="modifier"/>
+                </valList>
+              </attDef>
+            </attList>
+            </elementSpec>
+
+          <!-- 2.10b — Speech groups: @type taxonomy
+               <spGrp> wraps simultaneous-singing speeches (a 2, a 3, …). The
+               type is a numeric count or "ensemble" when the group is named
+               but unbounded (chorus + soloists).
+          -->
+          <elementSpec ident="spGrp" mode="change">
+            <desc>Speech group for simultaneous performance. @type is one of
+              <code>a_2, a_3, a_4, a_5, a_6, ensemble</code> (the snake-case
+              `a_N` mirrors the Italian "a due / a tre" cue).</desc>
+            <constraintSpec ident="spgrp-type-vocab" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:spGrp">
+                  <sch:assert test="@type = ('a_2', 'a_3', 'a_4', 'a_5', 'a_6', 'ensemble')" role="error" id="SPGRP_TYPE_INVALID">
+                    &lt;spGrp type="<sch:value-of select="@type"/>"&gt; — valore non
+                    nella tassonomia. Valori ammessi: a_2, a_3, a_4, a_5, a_6, ensemble.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          <attList>
+              <attDef ident="type" mode="change" usage="req">
+                <valList type="closed" mode="add">
+                  <valItem ident="a_2"/>
+                  <valItem ident="a_3"/>
+                  <valItem ident="a_4"/>
+                  <valItem ident="a_5"/>
+                  <valItem ident="a_6"/>
+                  <valItem ident="ensemble"/>
+                </valList>
+              </attDef>
+            </attList>
+            </elementSpec>
+
+          <!-- 2.11 — Split lines (@part) symmetry -->
+          <elementSpec ident="l" mode="change">
+            <desc>A line of verse. @part marks split lines (sticomythia):
+              I=initial, M=medial, F=final. Every I must have a matching F.</desc>
+            <constraintSpec ident="part-symmetry" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:l[@part='I']">
+                  <sch:assert test="following::tei:l[@part='F'][1]" role="warning" id="PART_I_NO_F">
+                    Verso part="I" senza un successivo part="F" — possibile errore di codifica.
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+            <constraintSpec ident="met-syllable-pattern" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:l[@met]">
+                  <sch:assert test="matches(@met, '^\d{1,2}[pts]?$') or normalize-space(@met) = ''" role="warning" id="MET_BAD_PATTERN">
+                    @met="<sch:value-of select="@met"/>" — convenzione del progetto:
+                    1–2 cifre seguite (opzionalmente) da p/t/s (es. 7p, 11t, 8s, 10).
+                    Cattura refusi come 1op, 11pp, 4+1, p8, F, M.
+                  </sch:assert>
+                </sch:rule>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:l[@real]">
+                  <sch:assert test="matches(@real, '^\d{1,2}[pts]?$')" role="warning" id="REAL_BAD_PATTERN">
+                    @real="<sch:value-of select="@real"/>" — stessa convenzione di @met
+                    (1–2 cifre + p/t/s opzionale).
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          <attList>
+              <attDef ident="part" mode="change" usage="opt">
+                <valList type="closed" mode="add">
+                  <valItem ident="I"/>
+                  <valItem ident="M"/>
+                  <valItem ident="F"/>
+                  <valItem ident="N"/>
+                </valList>
+              </attDef>
+              <attDef ident="synch" mode="add" usage="opt">
+                <desc>Pointer to a sibling &lt;l xml:id&gt; performed simultaneously.</desc>
+                <datatype><dataRef key="teidata.pointer"/></datatype>
+              </attDef>
+            </attList>
+            </elementSpec>
+
+          <!-- 2.12 — Empty @type values flagged -->
+          <constraintSpec ident="no-empty-type" scheme="schematron">
+            <constraint>
+              <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:*[@type='']">
+                <sch:report test="true()" role="warning" id="EMPTY_TYPE">
+                  @type="" (vuoto) su &lt;<sch:name/>&gt;. Rimuovere o specificare un valore.
+                </sch:report>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+
+          <!-- 2.13 — surface (Tier B) requires xml:id -->
+          <elementSpec ident="surface" mode="change">
+            <constraintSpec ident="surface-has-id" scheme="schematron">
+              <constraint>
+                <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:surface">
+                  <sch:assert test="@xml:id" role="error" id="SURFACE_NO_ID">
+                    &lt;surface&gt; deve avere @xml:id (riferimenti @facs dipendono).
+                  </sch:assert>
+                </sch:rule>
+              </constraint>
+            </constraintSpec>
+          </elementSpec>
+
+          <!-- 2.14 — fw (forme work; Tier B only) — informational, not literary -->
+          <elementSpec ident="fw" mode="change">
+            <desc>Physical page features (signatures, catchwords, running heads).
+              Not literary content — the reading view filters these out by default.</desc>
+          </elementSpec>
+
+          <!-- 2.15 — apparatus standoff (used in alignments/) -->
+          <elementSpec ident="app" mode="change">
+            <desc>Generated by scripts/compute_apparatus.py from witness collation.
+              Not hand-encoded in source TEI under this project's current convention.</desc>
+          </elementSpec>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               Informational rules (warnings/info only)
+               ═══════════════════════════════════════════════════════════ -->
+
+          <!-- I.1 — metDecl recommended but not required (Tier B has none) -->
+          <constraintSpec ident="metdecl-recommended" scheme="schematron">
+            <constraint>
+              <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:teiHeader/tei:encodingDesc">
+                <sch:report role="info" test="not(tei:metDecl)" id="NO_METDECL">
+                  Nessun &lt;metDecl&gt; — la vista di lettura non mostrerà annotazioni
+                  metriche. Atteso per le edizioni Tier B (trascrizioni automatiche).
+                </sch:report>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+
+          <!-- I.2 — Italian <resp> recommended -->
+          <constraintSpec ident="resp-italian" scheme="schematron">
+            <constraint>
+              <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:resp">
+                <sch:report test="normalize-space(.) = ('encoding', 'editing', 'transcription')" role="info" id="RESP_ENGLISH">
+                  &lt;resp&gt;<sch:value-of select="."/>&lt;/resp&gt; in inglese; la
+                  convenzione del progetto è italiano (es. "codifica", "edizione",
+                  "trascrizione").
+                </sch:report>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+
+        </schemaSpec>
+      </div>
+
+    </body>
+  </text>
+</TEI>

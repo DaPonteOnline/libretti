@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use these editions, please cite them as below."
+type: dataset
+title: "Lorenzo Da Ponte's Libretti — TEI Editions (Cinna, Il Ricco d'un giorno, Il Talismano)"
+abstract: >-
+  TEI P5 digital editions of three drammi per musica by Lorenzo Da Ponte
+  (1749–1838): Cinna (London, 1798), Il Ricco d'un giorno (Vienna, 1784),
+  and Il Talismano (Vienna, 1788). Each libretto is encoded from a single
+  printed witness and forms part of the Da Ponte Libretti digital scholarly
+  edition. This dataset bundles the encoded texts with the project's TEI
+  encoding model (ODD + Schematron) for reuse and validation.
+keywords:
+  - TEI P5
+  - Lorenzo da Ponte
+  - Italian libretti
+  - eighteenth-century opera
+  - digital scholarly edition
+  - drammi per musica
+license: CC-BY-4.0
+authors:
+  - family-names: Malavasi
+    given-names: Alessandro
+    orcid: https://orcid.org/0009-0002-4119-4326
+    affiliation: Università di Padova
+  - family-names: Pacchin
+    given-names: Marta
+    orcid: https://orcid.org/0009-0009-1350-6311
+    affiliation: "Conservatorio di Castelfranco Veneto · Conservatorio di Trapani"
+  - family-names: Scarponi
+    given-names: Ilaria
+    orcid: https://orcid.org/0009-0005-3549-8886
+    affiliation: Conservatorio di Castelfranco Veneto
+repository-code: https://github.com/DaPonteOnline/daponte-libretti-tei
+version: 0.1.0
+date-released: "2026-06-30"

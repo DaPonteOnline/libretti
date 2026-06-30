@@ -1,7 +1,7 @@
 {
   "upload_type": "dataset",
   "title": "Lorenzo Da Ponte's Libretti — TEI Editions (Cinna, Il Ricco d'un giorno, Il Talismano)",
-  "description": "TEI P5 digital editions of three drammi per musica by Lorenzo Da Ponte (1749–1838): Cinna (London, 1798), Il Ricco d'un giorno (Vienna, 1784), and Il Talismano (Vienna, 1788). Each libretto is encoded from a single printed witness and forms part of the Da Ponte Libretti digital scholarly edition. The dataset bundles the encoded texts with the project's TEI encoding model (ODD + Schematron) for reuse and validation.",
+  "description": "TEI P5 digital editions of three drammi per musica by Lorenzo Da Ponte (1749–1838): Cinna (London, 1798), Il Ricco d'un giorno (Vienna, 1784), and Il Talismano (Vienna, 1788). Each libretto is encoded from a single printed witness and forms part of the Da Ponte Libretti digital scholarly edition. The dataset bundles the encoded texts with the project's TEI encoding model (ODD + Schematron) for reuse and validation. The interactive web-application edition is archived at <a href=\"https://doi.org/10.5281/zenodo.21083489\">doi.org/10.5281/zenodo.21083489</a>.",
   "language": "ita",
   "license": "cc-by-4.0",
   "access_right": "open",

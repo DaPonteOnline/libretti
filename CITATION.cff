@@ -30,6 +30,6 @@ authors:
     given-names: Ilaria
     orcid: https://orcid.org/0009-0005-3549-8886
     affiliation: Conservatorio di Castelfranco Veneto
-repository-code: https://github.com/DaPonteOnline/daponte-libretti-tei
+repository-code: https://github.com/DaPonteOnline/libretti
 version: 0.1.0
 date-released: "2026-06-30"

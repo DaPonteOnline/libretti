@@ -34,6 +34,24 @@ metadata. Cite the **version** you consulted for reproducibility, and the
 - **Concept DOI (all versions):** [10.5281/zenodo.21082557](https://doi.org/10.5281/zenodo.21082557)
 - **This version (v0.1.0):** [10.5281/zenodo.21082558](https://doi.org/10.5281/zenodo.21082558)
 
+**Reference**
+
+> Malavasi, A., Pacchin, M., & Scarponi, I. (2026). *Lorenzo Da Ponte's Libretti — TEI Editions (Cinna, Il Ricco d'un giorno, Il Talismano)* (Version v0.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21082558
+
+**BibTeX**
+
+```bibtex
+@dataset{daponte_libretti_tei_2026,
+  author    = {Malavasi, Alessandro and Pacchin, Marta and Scarponi, Ilaria},
+  title     = {{Lorenzo Da Ponte's Libretti --- TEI Editions (Cinna, Il Ricco d'un giorno, Il Talismano)}},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {v0.1.0},
+  doi       = {10.5281/zenodo.21082558},
+  url       = {https://doi.org/10.5281/zenodo.21082558}
+}
+```
+
 ## Part of a larger edition
 
 These libretti are part of the **Da Ponte Libretti** digital scholarly

@@ -19,6 +19,6 @@
     {"name": "Scarponi, Ilaria", "orcid": "0009-0005-3549-8886", "affiliation": "Conservatorio di Castelfranco Veneto"}
   ],
   "related_identifiers": [
-    {"relation": "isPartOf", "identifier": "https://daponte.ficlit.unibo.it", "scheme": "url"}
+    {"relation": "isPartOf", "identifier": "10.5281/zenodo.21083489", "scheme": "doi"}
   ]
 }

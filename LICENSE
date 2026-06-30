@@ -1,0 +1,37 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Da Ponte Libretti project contributors and per-edition editors
+
+This license covers:
+
+  - All TEI-encoded source files in corpus/hand-encoded/
+  - All generated JSON data in src/data/
+  - All editorial prose authored within the project (about, method, docs)
+  - The rendered HTML output of the static site
+  - Wireframes and design artifacts in design/
+
+The TEI files in corpus/auto-pipeline/ derive from page scans whose
+original sources are in the public domain (printed editions from the
+17th–18th centuries). The encoding and structuring of those files is
+licensed under CC BY 4.0; the underlying texts are public domain.
+
+You are free to:
+
+  - Share — copy and redistribute the material in any medium or format
+  - Adapt — remix, transform, and build upon the material for any purpose,
+    even commercially.
+
+Under the following terms:
+
+  - Attribution — You must give appropriate credit, provide a link to the
+    license, and indicate if changes were made.
+
+For the canonical citation form, see CITATION.cff and the project's /cite
+page.
+
+For the full license text, see: https://creativecommons.org/licenses/by/4.0/legalcode
+
+---
+
+The project's source CODE (in scripts/, src/, themes/, etc.) is licensed
+separately under the MIT License — see LICENSE.
